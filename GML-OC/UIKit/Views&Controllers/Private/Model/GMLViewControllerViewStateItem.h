@@ -11,12 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 @class UIViewController;
 
-typedef void (^GMLViewControllerViewStateCancelBlock)(id<GMLViewControllerViewStateToken> token);
 @interface GMLViewControllerViewStateItem : NSObject<GMLViewControllerViewStateToken>
 
-@property (nonatomic, copy, readonly) GMLViewShowStateBlock block;
+@property (nonatomic, assign, readonly) GMLViewControllerViewState state;
+@property (nonatomic, copy, readonly) GMLViewControllerViewStateCallback block;
 
-- (instancetype)initWithBlock:(GMLViewShowStateBlock)block;
+- (instancetype)initWithState:(GMLViewControllerViewState)state block:(GMLViewControllerViewStateCallback)block;
 @end
 
 NS_ASSUME_NONNULL_END

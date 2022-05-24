@@ -12,11 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (GMLViewStateAdd)
 
-- (id<GMLViewControllerViewStateToken>)gml_addViewWillAppearBlock:(GMLViewShowStateBlock)block;
-- (id<GMLViewControllerViewStateToken>)gml_addViewDidAppearBlock:(GMLViewShowStateBlock)block;
-- (id<GMLViewControllerViewStateToken>)gml_addViewWillDisappearBlock:(GMLViewShowStateBlock)block;
-- (id<GMLViewControllerViewStateToken>)gml_addViewDidDisappearBlock:(GMLViewShowStateBlock)block;
-
+- (id<GMLViewControllerViewStateToken>)gml_addViewState:(GMLViewControllerViewState)state callback:(GMLViewControllerViewStateCallback)callback;
+- (void)gml_removeViewStateToken:(id<GMLViewControllerViewStateToken>)token;
 @end
 
 NS_ASSUME_NONNULL_END

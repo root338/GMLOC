@@ -15,4 +15,9 @@ FOUNDATION_EXPORT const unsigned char GML_OCVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <GML_OC/PublicHeader.h>
 
+#import <GML_OC/GMLNavigationController.h>
+#import <GML_OC/GMLNavigationBarAppearance.h>
+#import <GML_OC/GMLNavigationBarAppearanceProtocol.h>
+#import <GML_OC/GMLConfigureNavigationControllerProtocol.h>
 
+#import <GML_OC/Runtime+GMLAdd.h>

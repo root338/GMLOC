@@ -11,20 +11,8 @@
 
 #import <objc/runtime.h>
 
-#define __NaviViewStateContainer NSHashTable<GMLViewControllerViewStateItem *>
-#define __AddViewStateBlockCode(container) \
-GMLViewControllerViewStateItem *token = [[GMLViewControllerViewStateItem alloc] initWithBlock:block]; \
-if (container == nil) { \
-    container = [NSHashTable weakObjectsHashTable]; \
-} \
-[container addObject:token]; \
-return token;
-
 @interface UIViewController (__GMLViewStateAdd)
-@property (nonatomic, strong) __NaviViewStateContainer *viewWillAppearItems_gml;
-@property (nonatomic, strong) __NaviViewStateContainer *viewDidAppearItems_gml;
-@property (nonatomic, strong) __NaviViewStateContainer *viewWillDisappearItems_gml;
-@property (nonatomic, strong) __NaviViewStateContainer *viewDidDisappearItems_gml;
+@property (nonatomic, strong) NSMutableArray<GMLViewControllerViewStateItem *> *viewStateItems_gml;
 @end
 
 @implementation UIViewController (GMLViewStateAdd)
@@ -40,71 +28,55 @@ return token;
     });
 }
 
-- (id<GMLViewControllerViewStateToken>)gml_addViewWillAppearBlock:(GMLViewShowStateBlock)block {
-    __AddViewStateBlockCode(self.viewWillAppearItems_gml)
+- (id<GMLViewControllerViewStateToken>)gml_addViewState:(GMLViewControllerViewState)state callback:(GMLViewControllerViewStateCallback)callback {
+    GMLViewControllerViewStateItem *item = [[GMLViewControllerViewStateItem alloc] initWithState:state block:callback];
+    if (state == 0) return item;
+    NSMutableArray *items = self.viewStateItems_gml;
+    if (items == nil) {
+        items = NSMutableArray.array;
+        self.viewStateItems_gml = items;
+    }
+    [items addObject:item];
+    return item;
 }
-- (id<GMLViewControllerViewStateToken>)gml_addViewDidAppearBlock:(GMLViewShowStateBlock)block {
-    __AddViewStateBlockCode(self.viewDidAppearItems_gml)
-}
-- (id<GMLViewControllerViewStateToken>)gml_addViewWillDisappearBlock:(GMLViewShowStateBlock)block {
-    __AddViewStateBlockCode(self.viewWillDisappearItems_gml)
-}
-- (id<GMLViewControllerViewStateToken>)gml_addViewDidDisappearBlock:(GMLViewShowStateBlock)block {
-    __AddViewStateBlockCode(self.viewDidDisappearItems_gml)
+- (void)gml_removeViewStateToken:(id<GMLViewControllerViewStateToken>)token {
+    [self.viewStateItems_gml removeObject:token];
 }
 
 - (void)_gml_viewWillAppear:(BOOL)animated {
-    [self _forwardViewStateBlockWithContainer:self.viewWillAppearItems_gml isAnimated:animated];
+    [self _forwardViewState:GMLViewControllerViewStateWillAppear isAnimated:animated];
     [self _gml_viewWillAppear:animated];
 }
 - (void)_gml_viewDidAppear:(BOOL)animated {
-    [self _forwardViewStateBlockWithContainer:self.viewDidAppearItems_gml isAnimated:animated];
+    [self _forwardViewState:GMLViewControllerViewStateDidAppear isAnimated:animated];
     [self _gml_viewDidAppear:animated];
 }
 - (void)_gml_viewWillDisappear:(BOOL)animated {
-    [self _forwardViewStateBlockWithContainer:self.viewWillDisappearItems_gml isAnimated:animated];
+    [self _forwardViewState:GMLViewControllerViewStateWillDisappear isAnimated:animated];
     [self _gml_viewWillDisappear:animated];
 }
 - (void)_gml_viewDidDisappear:(BOOL)animated {
-    [self _forwardViewStateBlockWithContainer:self.viewDidDisappearItems_gml isAnimated:animated];
+    [self _forwardViewState:GMLViewControllerViewStateDidDisappear isAnimated:animated];
     [self _gml_viewDidDisappear:animated];
 }
 
-- (void)_forwardViewStateBlockWithContainer:(__NaviViewStateContainer *)container isAnimated: (BOOL)isAnimated {
-    NSEnumerator<GMLViewControllerViewStateItem *> *objectEnumerator = container.objectEnumerator;
-    GMLViewControllerViewStateItem *item = nil;
-    while ((item = objectEnumerator.nextObject) != nil) {
-        item.block(item, isAnimated);
-    }
+- (void)_forwardViewState:(GMLViewControllerViewState)viewState isAnimated:(BOOL)isAnimated {
+    // 为了在列表遍历中执行删除操作时导致出错
+    [[self.viewStateItems_gml copy] enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(GMLViewControllerViewStateItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.state & viewState) {
+            obj.block(viewState, isAnimated);
+        }
+    }];
 }
 
 @end
 
 @implementation UIViewController (__GMLViewStateAdd)
 
-- (void)setViewWillAppearItems_gml:(__NaviViewStateContainer *)items {
-    objc_setAssociatedObject(self, @selector(viewWillAppearItems_gml), items, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setViewStateItems_gml:(NSMutableArray<GMLViewControllerViewStateItem *> *)items {
+    objc_setAssociatedObject(self, @selector(viewStateItems_gml), items, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-- (__NaviViewStateContainer *)viewWillAppearItems_gml {
-    return objc_getAssociatedObject(self, _cmd);
-}
-- (void)setViewDidAppearItems_gml:(NSHashTable<GMLViewControllerViewStateItem *> *)items {
-    objc_setAssociatedObject(self, @selector(viewDidAppearItems_gml), items, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (__NaviViewStateContainer *)viewDidAppearItems_gml {
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setViewWillDisappearItems_gml:(__NaviViewStateContainer *)items {
-    objc_setAssociatedObject(self, @selector(viewWillDisappearItems_gml), items, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (__NaviViewStateContainer *)viewWillDisappearItems_gml {
-    return objc_getAssociatedObject(self, _cmd);
-}
-- (void)setViewDidDisappearItems_gml:(__NaviViewStateContainer *)items {
-    objc_setAssociatedObject(self, @selector(viewDidDisappearItems_gml), items, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-- (__NaviViewStateContainer *)viewDidDisappearItems_gml {
+- (NSMutableArray<GMLViewControllerViewStateItem *> *)viewStateItems_gml {
     return objc_getAssociatedObject(self, _cmd);
 }
 
