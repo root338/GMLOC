@@ -11,6 +11,18 @@
 		ABDB9D7A283B35BA007FDD41 /* GML_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; };
 		ABDB9D7F283B35BA007FDD41 /* GML_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D7E283B35BA007FDD41 /* GML_OCTests.m */; };
 		ABDB9D80283B35BA007FDD41 /* GML_OC.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9D72283B35BA007FDD41 /* GML_OC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABDB9D8C283B3605007FDD41 /* Runtime+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9D8A283B3605007FDD41 /* Runtime+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABDB9D8D283B3605007FDD41 /* Runtime+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D8B283B3605007FDD41 /* Runtime+GMLAdd.m */; };
+		ABDB9D95283B5396007FDD41 /* GMLTest.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9D93283B5396007FDD41 /* GMLTest.h */; };
+		ABDB9D96283B5396007FDD41 /* GMLTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D94283B5396007FDD41 /* GMLTest.m */; };
+		ABDB9DAD283B5A55007FDD41 /* GMLNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DAB283B5A55007FDD41 /* GMLNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABDB9DAE283B5A55007FDD41 /* GMLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9DAC283B5A55007FDD41 /* GMLNavigationController.m */; };
+		ABDB9DB3283B5ABE007FDD41 /* GMLNavigationControllerViewStateManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DB1283B5ABE007FDD41 /* GMLNavigationControllerViewStateManager.h */; };
+		ABDB9DB4283B5ABE007FDD41 /* GMLNavigationControllerViewStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9DB2283B5ABE007FDD41 /* GMLNavigationControllerViewStateManager.m */; };
+		ABDB9DB7283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DB5283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.h */; };
+		ABDB9DB8283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9DB6283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.m */; };
+		ABDB9DC1283B64DD007FDD41 /* GMLViewControllerViewStateItem.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DBF283B64DD007FDD41 /* GMLViewControllerViewStateItem.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		ABDB9DC2283B64DD007FDD41 /* GMLViewControllerViewStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9DC0283B64DD007FDD41 /* GMLViewControllerViewStateItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +41,19 @@
 		ABDB9D73283B35BA007FDD41 /* GML_OC.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GML_OC.docc; sourceTree = "<group>"; };
 		ABDB9D79283B35BA007FDD41 /* GML-OCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GML-OCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDB9D7E283B35BA007FDD41 /* GML_OCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GML_OCTests.m; sourceTree = "<group>"; };
+		ABDB9D8A283B3605007FDD41 /* Runtime+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runtime+GMLAdd.h"; sourceTree = "<group>"; };
+		ABDB9D8B283B3605007FDD41 /* Runtime+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Runtime+GMLAdd.m"; sourceTree = "<group>"; };
+		ABDB9D93283B5396007FDD41 /* GMLTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLTest.h; sourceTree = "<group>"; };
+		ABDB9D94283B5396007FDD41 /* GMLTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLTest.m; sourceTree = "<group>"; };
+		ABDB9DAB283B5A55007FDD41 /* GMLNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLNavigationController.h; sourceTree = "<group>"; };
+		ABDB9DAC283B5A55007FDD41 /* GMLNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLNavigationController.m; sourceTree = "<group>"; };
+		ABDB9DB1283B5ABE007FDD41 /* GMLNavigationControllerViewStateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLNavigationControllerViewStateManager.h; sourceTree = "<group>"; };
+		ABDB9DB2283B5ABE007FDD41 /* GMLNavigationControllerViewStateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLNavigationControllerViewStateManager.m; sourceTree = "<group>"; };
+		ABDB9DB5283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GMLViewStateAdd.h"; sourceTree = "<group>"; };
+		ABDB9DB6283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GMLViewStateAdd.m"; sourceTree = "<group>"; };
+		ABDB9DBF283B64DD007FDD41 /* GMLViewControllerViewStateItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLViewControllerViewStateItem.h; sourceTree = "<group>"; };
+		ABDB9DC0283B64DD007FDD41 /* GMLViewControllerViewStateItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLViewControllerViewStateItem.m; sourceTree = "<group>"; };
+		ABDB9DC3283B659F007FDD41 /* GMLViewControllerViewStateDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLViewControllerViewStateDefine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				ABDB9D72283B35BA007FDD41 /* GML_OC.h */,
+				ABDB9DA8283B5A0F007FDD41 /* UIKit */,
+				ABDB9D8E283B4404007FDD41 /* Test */,
+				ABDB9D89283B35CE007FDD41 /* Runtime */,
 				ABDB9D73283B35BA007FDD41 /* GML_OC.docc */,
 			);
 			path = "GML-OC";
@@ -85,6 +113,88 @@
 			path = "GML-OCTests";
 			sourceTree = "<group>";
 		};
+		ABDB9D89283B35CE007FDD41 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB9D8A283B3605007FDD41 /* Runtime+GMLAdd.h */,
+				ABDB9D8B283B3605007FDD41 /* Runtime+GMLAdd.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		ABDB9D8E283B4404007FDD41 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB9D93283B5396007FDD41 /* GMLTest.h */,
+				ABDB9D94283B5396007FDD41 /* GMLTest.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		ABDB9DA8283B5A0F007FDD41 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB9DA9283B5A19007FDD41 /* Views&Controllers */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		ABDB9DA9283B5A19007FDD41 /* Views&Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB9DBE283B6437007FDD41 /* Private */,
+				ABDB9DAA283B5A3F007FDD41 /* NavigationController */,
+			);
+			path = "Views&Controllers";
+			sourceTree = "<group>";
+		};
+		ABDB9DAA283B5A3F007FDD41 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB9DBD283B6417007FDD41 /* Internal */,
+				ABDB9DBC283B63FD007FDD41 /* Public */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		ABDB9DAF283B5A94007FDD41 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB9DB1283B5ABE007FDD41 /* GMLNavigationControllerViewStateManager.h */,
+				ABDB9DB2283B5ABE007FDD41 /* GMLNavigationControllerViewStateManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		ABDB9DBC283B63FD007FDD41 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB9DAB283B5A55007FDD41 /* GMLNavigationController.h */,
+				ABDB9DAC283B5A55007FDD41 /* GMLNavigationController.m */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		ABDB9DBD283B6417007FDD41 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB9DAF283B5A94007FDD41 /* Manager */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		ABDB9DBE283B6437007FDD41 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB9DC3283B659F007FDD41 /* GMLViewControllerViewStateDefine.h */,
+				ABDB9DBF283B64DD007FDD41 /* GMLViewControllerViewStateItem.h */,
+				ABDB9DC0283B64DD007FDD41 /* GMLViewControllerViewStateItem.m */,
+				ABDB9DB5283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.h */,
+				ABDB9DB6283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -92,7 +202,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDB9DB3283B5ABE007FDD41 /* GMLNavigationControllerViewStateManager.h in Headers */,
+				ABDB9D8C283B3605007FDD41 /* Runtime+GMLAdd.h in Headers */,
 				ABDB9D80283B35BA007FDD41 /* GML_OC.h in Headers */,
+				ABDB9DC1283B64DD007FDD41 /* GMLViewControllerViewStateItem.h in Headers */,
+				ABDB9D95283B5396007FDD41 /* GMLTest.h in Headers */,
+				ABDB9DAD283B5A55007FDD41 /* GMLNavigationController.h in Headers */,
+				ABDB9DB7283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDB9DB4283B5ABE007FDD41 /* GMLNavigationControllerViewStateManager.m in Sources */,
+				ABDB9DAE283B5A55007FDD41 /* GMLNavigationController.m in Sources */,
+				ABDB9DB8283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.m in Sources */,
 				ABDB9D74283B35BA007FDD41 /* GML_OC.docc in Sources */,
+				ABDB9DC2283B64DD007FDD41 /* GMLViewControllerViewStateItem.m in Sources */,
+				ABDB9D8D283B3605007FDD41 /* Runtime+GMLAdd.m in Sources */,
+				ABDB9D96283B5396007FDD41 /* GMLTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +466,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,6 +493,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
