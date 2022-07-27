@@ -9,11 +9,16 @@
 #import "GMLConfigureNavigationControllerManager.h"
 
 @interface GMLNavigationController ()
+
 @property (nonatomic, strong) GMLConfigureNavigationControllerManager *configureManager;
 @end
 
 @implementation GMLNavigationController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.delegate = self.configureManager;
+}
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     [self.configureManager handlePushViewController:viewController animated:animated];
     [super pushViewController:viewController animated:animated];
@@ -32,11 +37,11 @@
 }
 #pragma mark - Getter & Setter
 
-- (void)setDefaultAppearance:(id<GMLNavigationBarAppearanceProtocol>)defaultAppearance {
-    self.configureManager.defaultAppearance = defaultAppearance;
+- (void)setDefaultNavigationBarAppearance:(id<GMLNavigationBarAppearanceProtocol>)defaultAppearance {
+    self.configureManager.defaultNavigationBarAppearance = defaultAppearance;
 }
-- (id<GMLNavigationBarAppearanceProtocol>)defaultAppearance {
-    return self.configureManager.defaultAppearance;
+- (id<GMLNavigationBarAppearanceProtocol>)defaultNavigationBarAppearance {
+    return self.configureManager.defaultNavigationBarAppearance;
 }
 
 - (GMLConfigureNavigationControllerManager *)configureManager {

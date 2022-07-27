@@ -78,6 +78,7 @@
 
 - (void)handleControllerForOperation:(GMLNavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC animated:(BOOL)animated {
     if (operation == GMLNavigationControllerOperationNone) return;
+    
     void (^configurationBarAppearance) (void) = ^{
         switch (operation) {
             case GMLNavigationControllerOperationPush: {
@@ -113,6 +114,15 @@
         // 不进行动画时直接进行设置
         configurationBarAppearance();
     }
+}
+
+#pragma mark - UINavigationControllerDelegate
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    BOOL isHiddenNavigationBar = false;
+    if ([viewController conformsToProtocol:@protocol(GMLConfigureNavigationController)]) {
+        isHiddenNavigationBar = [(id<GMLConfigureNavigationController>)viewController isHiddenNavigationBar];
+    }
+    [navigationController setNavigationBarHidden:isHiddenNavigationBar animated:animated];
 }
 
 #pragma mark - GMLNavigationBarAppearanceManagerDelegate
@@ -171,10 +181,10 @@
 
 #pragma mark - Getter & Setter
 
-- (void)setDefaultAppearance:(id<GMLNavigationBarAppearanceProtocol>)defaultAppearance {
+- (void)setDefaultNavigationBarAppearance:(id<GMLNavigationBarAppearanceProtocol>)defaultAppearance {
     self.appearanceManager.defaultAppearance = defaultAppearance;
 }
-- (id<GMLNavigationBarAppearanceProtocol>)defaultAppearance {
+- (id<GMLNavigationBarAppearanceProtocol>)defaultNavigationBarAppearance {
     return self.appearanceManager.defaultAppearance;
 }
 

@@ -14,9 +14,6 @@
 
 @implementation GMLViewControllerViewStateItem
 
-- (void)dealloc {
-    NSLog(@"%@, %@", NSStringFromSelector(_cmd), self);
-}
 - (instancetype)initWithState:(GMLViewControllerViewState)state block:(GMLViewControllerViewStateCallback)block {
     self = [super init];
     if (self) {

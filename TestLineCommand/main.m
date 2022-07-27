@@ -6,29 +6,48 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GMLTimerAdapter.h"
+
+@interface A: NSObject
++ (void)testClass;
+- (void)testInstance;
+@end
+@implementation A
++  (void)testClass {
+    
+}
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    return [super respondsToSelector:aSelector];
+}
++ (BOOL)resolveClassMethod:(SEL)sel {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    return [super resolveClassMethod:sel];
+}
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    return [super resolveInstanceMethod:sel];
+}
+
++ (BOOL)instancesRespondToSelector:(SEL)aSelector {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    return [super instancesRespondToSelector:aSelector];
+}
+
+- (void)testInstance {
+    
+}
+
+@end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSMutableArray *mArr = [NSMutableArray arrayWithObjects:
-                                @1, @3, @4, @11, @00, @77, nil];
-//        [mArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            [mArr removeObject:obj];
-//            NSLog(@"%@", obj);
-//        }];
-        NSHashTable *mList = [NSHashTable weakObjectsHashTable];
-        for (NSNumber *obj in mArr) {
-            NSLog(@"%@", obj);
-            [mList addObject:obj];
-        }
-        NSLog(@"%@", mList.allObjects);
-        for (NSNumber *obj in mList) {
-            [mArr removeObject:obj];
-            NSLog(@"%@", obj);
-        }
-//        for (NSNumber *obj in mArr) {
-//            [mArr removeObject:obj];
-//            NSLog(@"%@", obj);
-//        }
+        A *a = [A new];
+        NSLog(@"a respondsToSelector:@selector(testClass)");
+        NSLog(@"%i", [a respondsToSelector:@selector(testClass)]);
+        NSLog(@"A respondsToSelector:@selector(testInstance)");
+        NSLog(@"%i", [A respondsToSelector:@selector(testInstance)]);
+        
     }
     return 0;
 }

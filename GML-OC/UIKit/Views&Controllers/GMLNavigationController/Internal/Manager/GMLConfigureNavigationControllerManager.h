@@ -7,14 +7,15 @@
 
 #import <Foundation/Foundation.h>
 #import "GMLConfigureNavigationControllerDefines.h"
+#import <UIKit/UINavigationController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @class UINavigationController, UIViewController;
 @protocol GMLNavigationBarAppearanceProtocol;
-@interface GMLConfigureNavigationControllerManager : NSObject
+@interface GMLConfigureNavigationControllerManager : NSObject<UINavigationControllerDelegate>
 
 @property (nullable, nonatomic, weak) UINavigationController *navigationController;
-@property (nullable, nonatomic, copy) id<GMLNavigationBarAppearanceProtocol> defaultAppearance;
+@property (nullable, nonatomic, copy) id<GMLNavigationBarAppearanceProtocol> defaultNavigationBarAppearance;
 
 - (instancetype)initWithNavigationController:(UINavigationController *)navigationController;
 

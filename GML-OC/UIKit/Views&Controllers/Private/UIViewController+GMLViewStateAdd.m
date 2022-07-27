@@ -13,6 +13,7 @@
 
 @interface UIViewController (__GMLViewStateAdd)
 @property (nonatomic, strong) NSMutableArray<GMLViewControllerViewStateItem *> *viewStateItems_gml;
+@property (nonatomic, assign) GMLViewControllerViewState didAddViewStateFlag_gml;
 @end
 
 @implementation UIViewController (GMLViewStateAdd)
@@ -37,6 +38,15 @@
         self.viewStateItems_gml = items;
     }
     [items addObject:item];
+    
+    {// 更新已经添加状态集
+        GMLViewControllerViewState oldDidAddState = self.didAddViewStateFlag_gml;
+        GMLViewControllerViewState didAddState = oldDidAddState | state;
+        if (didAddState != oldDidAddState) {
+            self.didAddViewStateFlag_gml = didAddState;
+        }
+    }
+    
     return item;
 }
 - (void)gml_removeViewStateToken:(id<GMLViewControllerViewStateToken>)token {
@@ -44,25 +54,33 @@
 }
 
 - (void)_gml_viewWillAppear:(BOOL)animated {
-    [self _forwardViewState:GMLViewControllerViewStateWillAppear isAnimated:animated];
+    if (self.didAddViewStateFlag_gml & GMLViewControllerViewStateAppear) {
+        [self _forwardViewState:GMLViewControllerViewStateWillAppear isAnimated:animated];
+    }
     [self _gml_viewWillAppear:animated];
 }
 - (void)_gml_viewDidAppear:(BOOL)animated {
-    [self _forwardViewState:GMLViewControllerViewStateDidAppear isAnimated:animated];
+    if (self.didAddViewStateFlag_gml & GMLViewControllerViewStateDidAppear) {
+        [self _forwardViewState:GMLViewControllerViewStateDidAppear isAnimated:animated];
+    }
     [self _gml_viewDidAppear:animated];
 }
 - (void)_gml_viewWillDisappear:(BOOL)animated {
-    [self _forwardViewState:GMLViewControllerViewStateWillDisappear isAnimated:animated];
+    if (self.didAddViewStateFlag_gml & GMLViewControllerViewStateWillDisappear) {
+        [self _forwardViewState:GMLViewControllerViewStateWillDisappear isAnimated:animated];
+    }
     [self _gml_viewWillDisappear:animated];
 }
 - (void)_gml_viewDidDisappear:(BOOL)animated {
-    [self _forwardViewState:GMLViewControllerViewStateDidDisappear isAnimated:animated];
+    if (self.didAddViewStateFlag_gml & GMLViewControllerViewStateDidDisappear) {
+        [self _forwardViewState:GMLViewControllerViewStateDidDisappear isAnimated:animated];
+    }
     [self _gml_viewDidDisappear:animated];
 }
 
 - (void)_forwardViewState:(GMLViewControllerViewState)viewState isAnimated:(BOOL)isAnimated {
     // 为了在列表遍历中执行删除操作时导致出错
-    [[self.viewStateItems_gml copy] enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(GMLViewControllerViewStateItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [[self.viewStateItems_gml copy] enumerateObjectsUsingBlock:^(GMLViewControllerViewStateItem * obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (obj.state & viewState) {
             obj.block(viewState, isAnimated);
         }
@@ -78,6 +96,13 @@
 }
 - (NSMutableArray<GMLViewControllerViewStateItem *> *)viewStateItems_gml {
     return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setDidAddViewStateFlag_gml:(GMLViewControllerViewState)flag {
+    objc_setAssociatedObject(self, @selector(didAddViewStateFlag_gml), @(flag), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (GMLViewControllerViewState)didAddViewStateFlag_gml {
+    return [objc_getAssociatedObject(self, _cmd) unsignedIntegerValue];
 }
 
 @end

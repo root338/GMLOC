@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @class UIViewController;
 
+/// 视图状态，存储事件回调和监听状态值
 @interface GMLViewControllerViewStateItem : NSObject<GMLViewControllerViewStateToken>
 
 @property (nonatomic, assign, readonly) GMLViewControllerViewState state;

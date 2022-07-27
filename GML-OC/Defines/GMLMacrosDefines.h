@@ -10,22 +10,22 @@
 
 #define GMLEqualObjectAndContainNil(lObj, rObj) ( \
     ((lObj) == nil && (rObj) == nil) \
-    || [(lObj) isEqual:(rObj)] \
+    || ((rObj) != nil && [(lObj) isEqual:(rObj)]) \
 )
 
 #define GMLEqualDictionaryAndContainNil(lObj, rObj) ( \
     ((lObj) == nil && (rObj) == nil) \
-    || [(lObj) isEqualToDictionary:(rObj)] \
+    || ((rObj) != nil && [(lObj) isEqualToDictionary:(rObj)]) \
 )
 
-#define GMLEqualObjectAndContainNil(lObj, rObj) ( \
+#define GMLEqualStringAndContainNil(lObj, rObj) ( \
     ((lObj) == nil && (rObj) == nil) \
-    || [(lObj) isEqual:(rObj)] \
+    || ((rObj) != nil && [(lObj) isEqualToString:(rObj)]) \
 )
 
 #define GMLEqualArrayAndContainNil(lObj, rObj) ( \
     ((lObj) == nil && (rObj) == nil) \
-    || [(lObj) isEqualToArray:(rObj)] \
+    || ((rObj) != nil && [(lObj) isEqualToArray:(rObj)]) \
 )
 
 #endif /* GMLMacrosDefines_h */

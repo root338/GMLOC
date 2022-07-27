@@ -7,6 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB13552828752AFA003AAEE6 /* GMLUIGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = AB13552628752AFA003AAEE6 /* GMLUIGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB13552928752AFA003AAEE6 /* GMLUIGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = AB13552728752AFA003AAEE6 /* GMLUIGeometry.m */; };
+		AB13553E28780D52003AAEE6 /* UIAlertController+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB13553C28780D51003AAEE6 /* UIAlertController+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB13553F28780D52003AAEE6 /* UIAlertController+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AB13553D28780D51003AAEE6 /* UIAlertController+GMLAdd.m */; };
+		AB13554528780E25003AAEE6 /* GMLAlertConfigurationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AB13554428780E25003AAEE6 /* GMLAlertConfigurationProtocol.h */; };
+		AB22DF9B2884FBF600181E48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB22DF9A2884FBF600181E48 /* AppDelegate.m */; };
+		AB22DF9E2884FBF600181E48 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB22DF9D2884FBF600181E48 /* SceneDelegate.m */; };
+		AB22DFA12884FBF600181E48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB22DFA02884FBF600181E48 /* ViewController.m */; };
+		AB22DFA42884FBF600181E48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB22DFA22884FBF600181E48 /* Main.storyboard */; };
+		AB22DFA62884FBF900181E48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB22DFA52884FBF900181E48 /* Assets.xcassets */; };
+		AB22DFA92884FBF900181E48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB22DFA72884FBF900181E48 /* LaunchScreen.storyboard */; };
+		AB22DFAC2884FBF900181E48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB22DFAB2884FBF900181E48 /* main.m */; };
+		AB22DFB62884FBF900181E48 /* GMLTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB22DFB52884FBF900181E48 /* GMLTestTests.m */; };
+		AB22DFC02884FBF900181E48 /* GMLTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB22DFBF2884FBF900181E48 /* GMLTestUITests.m */; };
+		AB22DFC22884FBF900181E48 /* GMLTestUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB22DFC12884FBF900181E48 /* GMLTestUITestsLaunchTests.m */; };
+		AB22DFD3288502AB00181E48 /* GMLTimerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AB46BB5D2881464400C3B30B /* GMLTimerAdapter.m */; };
+		AB256D2928449F0400B3A441 /* GMLProtocolFlagManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AB256D2728449F0400B3A441 /* GMLProtocolFlagManager.h */; };
+		AB256D2F2844DF2500B3A441 /* GMLProtocolFlagModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AB256D2D2844DF2500B3A441 /* GMLProtocolFlagModel.h */; };
+		AB256D302844DF2500B3A441 /* GMLProtocolFlagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB256D2E2844DF2500B3A441 /* GMLProtocolFlagModel.m */; };
+		AB256D342844E28800B3A441 /* GMLObjectRuntimeHelp.h in Headers */ = {isa = PBXBuildFile; fileRef = AB256D322844E28800B3A441 /* GMLObjectRuntimeHelp.h */; };
+		AB256D352844E28800B3A441 /* GMLObjectRuntimeHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = AB256D332844E28800B3A441 /* GMLObjectRuntimeHelp.m */; };
+		AB46BB5E2881464400C3B30B /* GMLTimerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = AB46BB5C2881464400C3B30B /* GMLTimerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB46BB5F2881464400C3B30B /* GMLTimerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AB46BB5D2881464400C3B30B /* GMLTimerAdapter.m */; };
+		AB46BB6728814C1C00C3B30B /* GMLTimeConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = AB46BB6628814C1C00C3B30B /* GMLTimeConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB9FA538288507AB00A08C7C /* GML_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; };
+		AB9FA539288507AB00A08C7C /* GML_OC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AB9FA56C2888005A00A08C7C /* GMLDispatchMainFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9FA56B2888002F00A08C7C /* GMLDispatchMainFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB9FA56E28880D1900A08C7C /* GMLDispatchMainFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9FA56D28880D1900A08C7C /* GMLDispatchMainFunction.m */; };
+		AB9FA58F288A8E5900A08C7C /* NSArray+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9FA58D288A8E5900A08C7C /* NSArray+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB9FA590288A8E5900A08C7C /* NSArray+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9FA58E288A8E5900A08C7C /* NSArray+GMLAdd.m */; };
+		ABA07A60288E3E320053373B /* GMLMacrosDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DF2283CE3A3007FDD41 /* GMLMacrosDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABA9BFAC283CF50500EE3F54 /* GML_OC.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9D72283B35BA007FDD41 /* GML_OC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABDB9D74283B35BA007FDD41 /* GML_OC.docc in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D73283B35BA007FDD41 /* GML_OC.docc */; };
 		ABDB9D7A283B35BA007FDD41 /* GML_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; };
@@ -37,6 +68,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AB22DFB22884FBF900181E48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABDB9D66283B35BA007FDD41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB22DF962884FBF600181E48;
+			remoteInfo = GMLTest;
+		};
+		AB22DFBC2884FBF900181E48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABDB9D66283B35BA007FDD41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB22DF962884FBF600181E48;
+			remoteInfo = GMLTest;
+		};
+		AB22DFCC2884FC1E00181E48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABDB9D66283B35BA007FDD41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABDB9D6E283B35BA007FDD41;
+			remoteInfo = "GML-OC";
+		};
 		ABDB9D7B283B35BA007FDD41 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ABDB9D66283B35BA007FDD41 /* Project object */;
@@ -47,6 +99,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		AB9FA53A288507AB00A08C7C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AB9FA539288507AB00A08C7C /* GML_OC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABDB9DC9283C6E0A007FDD41 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,6 +122,41 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB13552628752AFA003AAEE6 /* GMLUIGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLUIGeometry.h; sourceTree = "<group>"; };
+		AB13552728752AFA003AAEE6 /* GMLUIGeometry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLUIGeometry.m; sourceTree = "<group>"; };
+		AB13553C28780D51003AAEE6 /* UIAlertController+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+GMLAdd.h"; sourceTree = "<group>"; };
+		AB13553D28780D51003AAEE6 /* UIAlertController+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+GMLAdd.m"; sourceTree = "<group>"; };
+		AB13554428780E25003AAEE6 /* GMLAlertConfigurationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLAlertConfigurationProtocol.h; sourceTree = "<group>"; };
+		AB22DF972884FBF600181E48 /* GMLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB22DF992884FBF600181E48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AB22DF9A2884FBF600181E48 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AB22DF9C2884FBF600181E48 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		AB22DF9D2884FBF600181E48 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		AB22DF9F2884FBF600181E48 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AB22DFA02884FBF600181E48 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AB22DFA32884FBF600181E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB22DFA52884FBF900181E48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB22DFA82884FBF900181E48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB22DFAA2884FBF900181E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB22DFAB2884FBF900181E48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB22DFB12884FBF900181E48 /* GMLTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GMLTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB22DFB52884FBF900181E48 /* GMLTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLTestTests.m; sourceTree = "<group>"; };
+		AB22DFBB2884FBF900181E48 /* GMLTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GMLTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB22DFBF2884FBF900181E48 /* GMLTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLTestUITests.m; sourceTree = "<group>"; };
+		AB22DFC12884FBF900181E48 /* GMLTestUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLTestUITestsLaunchTests.m; sourceTree = "<group>"; };
+		AB256D2728449F0400B3A441 /* GMLProtocolFlagManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLProtocolFlagManager.h; sourceTree = "<group>"; };
+		AB256D2828449F0400B3A441 /* GMLProtocolFlagManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLProtocolFlagManager.m; sourceTree = "<group>"; };
+		AB256D2D2844DF2500B3A441 /* GMLProtocolFlagModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLProtocolFlagModel.h; sourceTree = "<group>"; };
+		AB256D2E2844DF2500B3A441 /* GMLProtocolFlagModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLProtocolFlagModel.m; sourceTree = "<group>"; };
+		AB256D322844E28800B3A441 /* GMLObjectRuntimeHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLObjectRuntimeHelp.h; sourceTree = "<group>"; };
+		AB256D332844E28800B3A441 /* GMLObjectRuntimeHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLObjectRuntimeHelp.m; sourceTree = "<group>"; };
+		AB46BB5C2881464400C3B30B /* GMLTimerAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLTimerAdapter.h; sourceTree = "<group>"; };
+		AB46BB5D2881464400C3B30B /* GMLTimerAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLTimerAdapter.m; sourceTree = "<group>"; };
+		AB46BB6628814C1C00C3B30B /* GMLTimeConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLTimeConfiguration.h; sourceTree = "<group>"; };
+		AB9FA56B2888002F00A08C7C /* GMLDispatchMainFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLDispatchMainFunction.h; sourceTree = "<group>"; };
+		AB9FA56D28880D1900A08C7C /* GMLDispatchMainFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLDispatchMainFunction.m; sourceTree = "<group>"; };
+		AB9FA58D288A8E5900A08C7C /* NSArray+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+GMLAdd.h"; sourceTree = "<group>"; };
+		AB9FA58E288A8E5900A08C7C /* NSArray+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+GMLAdd.m"; sourceTree = "<group>"; };
 		ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GML_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDB9D72283B35BA007FDD41 /* GML_OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GML_OC.h; sourceTree = "<group>"; };
 		ABDB9D73283B35BA007FDD41 /* GML_OC.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GML_OC.docc; sourceTree = "<group>"; };
@@ -93,6 +191,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AB22DF942884FBF600181E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB9FA538288507AB00A08C7C /* GML_OC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB22DFAE2884FBF900181E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB22DFB82884FBF900181E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABDB9D6C283B35BA007FDD41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,14 +238,158 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB13552528752ADD003AAEE6 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				AB13552628752AFA003AAEE6 /* GMLUIGeometry.h */,
+				AB13552728752AFA003AAEE6 /* GMLUIGeometry.m */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		AB13553B28780D3D003AAEE6 /* GMLAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				AB13554128780DEA003AAEE6 /* Internal */,
+				AB13554028780DD3003AAEE6 /* Public */,
+			);
+			path = GMLAlertController;
+			sourceTree = "<group>";
+		};
+		AB13554028780DD3003AAEE6 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				AB13553C28780D51003AAEE6 /* UIAlertController+GMLAdd.h */,
+				AB13553D28780D51003AAEE6 /* UIAlertController+GMLAdd.m */,
+				AB13554428780E25003AAEE6 /* GMLAlertConfigurationProtocol.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		AB13554128780DEA003AAEE6 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				AB13554228780DF1003AAEE6 /* Model */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		AB13554228780DF1003AAEE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB22DF982884FBF600181E48 /* GMLTest */ = {
+			isa = PBXGroup;
+			children = (
+				AB22DF992884FBF600181E48 /* AppDelegate.h */,
+				AB22DF9A2884FBF600181E48 /* AppDelegate.m */,
+				AB22DF9C2884FBF600181E48 /* SceneDelegate.h */,
+				AB22DF9D2884FBF600181E48 /* SceneDelegate.m */,
+				AB22DF9F2884FBF600181E48 /* ViewController.h */,
+				AB22DFA02884FBF600181E48 /* ViewController.m */,
+				AB22DFA22884FBF600181E48 /* Main.storyboard */,
+				AB22DFA52884FBF900181E48 /* Assets.xcassets */,
+				AB22DFA72884FBF900181E48 /* LaunchScreen.storyboard */,
+				AB22DFAA2884FBF900181E48 /* Info.plist */,
+				AB22DFAB2884FBF900181E48 /* main.m */,
+			);
+			path = GMLTest;
+			sourceTree = "<group>";
+		};
+		AB22DFB42884FBF900181E48 /* GMLTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB22DFB52884FBF900181E48 /* GMLTestTests.m */,
+			);
+			path = GMLTestTests;
+			sourceTree = "<group>";
+		};
+		AB22DFBE2884FBF900181E48 /* GMLTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB22DFBF2884FBF900181E48 /* GMLTestUITests.m */,
+				AB22DFC12884FBF900181E48 /* GMLTestUITestsLaunchTests.m */,
+			);
+			path = GMLTestUITests;
+			sourceTree = "<group>";
+		};
+		AB22DFCE2884FC2400181E48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB256D2628449EE700B3A441 /* ProtocolFlag */ = {
+			isa = PBXGroup;
+			children = (
+				AB256D2C2844DECB00B3A441 /* Model */,
+				AB256D2728449F0400B3A441 /* GMLProtocolFlagManager.h */,
+				AB256D2828449F0400B3A441 /* GMLProtocolFlagManager.m */,
+			);
+			path = ProtocolFlag;
+			sourceTree = "<group>";
+		};
+		AB256D2C2844DECB00B3A441 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB256D2D2844DF2500B3A441 /* GMLProtocolFlagModel.h */,
+				AB256D2E2844DF2500B3A441 /* GMLProtocolFlagModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB46BB5A2881461800C3B30B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				AB9FA58C288A8E4800A08C7C /* Collections */,
+				AB46BB5B2881462400C3B30B /* Processes&Threads */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		AB46BB5B2881462400C3B30B /* Processes&Threads */ = {
+			isa = PBXGroup;
+			children = (
+				AB46BB6028814BAF00C3B30B /* Timer */,
+			);
+			path = "Processes&Threads";
+			sourceTree = "<group>";
+		};
+		AB46BB6028814BAF00C3B30B /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				AB46BB5C2881464400C3B30B /* GMLTimerAdapter.h */,
+				AB46BB5D2881464400C3B30B /* GMLTimerAdapter.m */,
+				AB46BB6628814C1C00C3B30B /* GMLTimeConfiguration.h */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		AB9FA58C288A8E4800A08C7C /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				AB9FA58D288A8E5900A08C7C /* NSArray+GMLAdd.h */,
+				AB9FA58E288A8E5900A08C7C /* NSArray+GMLAdd.m */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
 		ABDB9D65283B35BA007FDD41 = {
 			isa = PBXGroup;
 			children = (
 				ABDB9D71283B35BA007FDD41 /* GML-OC */,
 				ABDB9D7D283B35BA007FDD41 /* GML-OCTests */,
 				ABDB9DCC283C6E0A007FDD41 /* TestLineCommand */,
+				AB22DF982884FBF600181E48 /* GMLTest */,
+				AB22DFB42884FBF900181E48 /* GMLTestTests */,
+				AB22DFBE2884FBF900181E48 /* GMLTestUITests */,
 				ABDB9D70283B35BA007FDD41 /* Products */,
 				ABDB9DC6283C6CC5007FDD41 /* TestPlayground.playground */,
+				AB22DFCE2884FC2400181E48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +399,9 @@
 				ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */,
 				ABDB9D79283B35BA007FDD41 /* GML-OCTests.xctest */,
 				ABDB9DCB283C6E0A007FDD41 /* TestLineCommand */,
+				AB22DF972884FBF600181E48 /* GMLTest.app */,
+				AB22DFB12884FBF900181E48 /* GMLTestTests.xctest */,
+				AB22DFBB2884FBF900181E48 /* GMLTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				ABDB9D72283B35BA007FDD41 /* GML_OC.h */,
+				AB46BB5A2881461800C3B30B /* Foundation */,
 				ABDB9DF1283CE368007FDD41 /* Defines */,
 				ABDB9DA8283B5A0F007FDD41 /* UIKit */,
 				ABDB9D8E283B4404007FDD41 /* Test */,
@@ -165,6 +433,9 @@
 			children = (
 				ABDB9D8A283B3605007FDD41 /* Runtime+GMLAdd.h */,
 				ABDB9D8B283B3605007FDD41 /* Runtime+GMLAdd.m */,
+				AB256D322844E28800B3A441 /* GMLObjectRuntimeHelp.h */,
+				AB256D332844E28800B3A441 /* GMLObjectRuntimeHelp.m */,
+				AB256D2628449EE700B3A441 /* ProtocolFlag */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -181,6 +452,7 @@
 		ABDB9DA8283B5A0F007FDD41 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				AB13552528752ADD003AAEE6 /* Geometry */,
 				ABDB9DA9283B5A19007FDD41 /* Views&Controllers */,
 			);
 			path = UIKit;
@@ -189,19 +461,20 @@
 		ABDB9DA9283B5A19007FDD41 /* Views&Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB13553B28780D3D003AAEE6 /* GMLAlertController */,
 				ABDB9DBE283B6437007FDD41 /* Private */,
-				ABDB9DAA283B5A3F007FDD41 /* NavigationController */,
+				ABDB9DAA283B5A3F007FDD41 /* GMLNavigationController */,
 			);
 			path = "Views&Controllers";
 			sourceTree = "<group>";
 		};
-		ABDB9DAA283B5A3F007FDD41 /* NavigationController */ = {
+		ABDB9DAA283B5A3F007FDD41 /* GMLNavigationController */ = {
 			isa = PBXGroup;
 			children = (
 				ABDB9DBD283B6417007FDD41 /* Internal */,
 				ABDB9DBC283B63FD007FDD41 /* Public */,
 			);
-			path = NavigationController;
+			path = GMLNavigationController;
 			sourceTree = "<group>";
 		};
 		ABDB9DAF283B5A94007FDD41 /* Manager */ = {
@@ -311,6 +584,8 @@
 			isa = PBXGroup;
 			children = (
 				ABDB9DF2283CE3A3007FDD41 /* GMLMacrosDefines.h */,
+				AB9FA56B2888002F00A08C7C /* GMLDispatchMainFunction.h */,
+				AB9FA56D28880D1900A08C7C /* GMLDispatchMainFunction.m */,
 			);
 			path = Defines;
 			sourceTree = "<group>";
@@ -323,17 +598,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDB9DE0283C7DE3007FDD41 /* GMLNavigationBarAppearanceManager.h in Headers */,
+				AB256D342844E28800B3A441 /* GMLObjectRuntimeHelp.h in Headers */,
 				ABDB9DEF283CDC54007FDD41 /* GMLViewControllerViewStateDefine.h in Headers */,
+				AB13552828752AFA003AAEE6 /* GMLUIGeometry.h in Headers */,
 				ABDB9DD9283C7C5B007FDD41 /* GMLNavigationBarAppearanceItem.h in Headers */,
 				ABDB9DEA283CB6CB007FDD41 /* GMLConfigureNavigationControllerManager.h in Headers */,
 				ABDB9DED283CDC23007FDD41 /* GMLConfigureNavigationControllerProtocol.h in Headers */,
 				ABDB9D8C283B3605007FDD41 /* Runtime+GMLAdd.h in Headers */,
+				AB256D2928449F0400B3A441 /* GMLProtocolFlagManager.h in Headers */,
+				AB46BB5E2881464400C3B30B /* GMLTimerAdapter.h in Headers */,
 				ABDB9DF0283CDE43007FDD41 /* GMLNavigationBarAppearanceProtocol.h in Headers */,
 				ABA9BFAC283CF50500EE3F54 /* GML_OC.h in Headers */,
+				AB13554528780E25003AAEE6 /* GMLAlertConfigurationProtocol.h in Headers */,
+				AB46BB6728814C1C00C3B30B /* GMLTimeConfiguration.h in Headers */,
+				AB9FA56C2888005A00A08C7C /* GMLDispatchMainFunction.h in Headers */,
+				AB256D2F2844DF2500B3A441 /* GMLProtocolFlagModel.h in Headers */,
 				ABDB9DC1283B64DD007FDD41 /* GMLViewControllerViewStateItem.h in Headers */,
 				ABDB9D95283B5396007FDD41 /* GMLTest.h in Headers */,
+				AB9FA58F288A8E5900A08C7C /* NSArray+GMLAdd.h in Headers */,
 				ABDB9DAD283B5A55007FDD41 /* GMLNavigationController.h in Headers */,
+				ABA07A60288E3E320053373B /* GMLMacrosDefines.h in Headers */,
 				ABDB9DEE283CDC48007FDD41 /* GMLConfigureNavigationControllerDefines.h in Headers */,
+				AB13553E28780D52003AAEE6 /* UIAlertController+GMLAdd.h in Headers */,
 				ABDB9DB7283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.h in Headers */,
 				ABDB9DD4283C7BE0007FDD41 /* GMLNavigationBarAppearance.h in Headers */,
 			);
@@ -342,6 +628,61 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		AB22DF962884FBF600181E48 /* GMLTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB22DFC92884FBF900181E48 /* Build configuration list for PBXNativeTarget "GMLTest" */;
+			buildPhases = (
+				AB22DF932884FBF600181E48 /* Sources */,
+				AB22DF942884FBF600181E48 /* Frameworks */,
+				AB22DF952884FBF600181E48 /* Resources */,
+				AB9FA53A288507AB00A08C7C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB22DFCD2884FC1E00181E48 /* PBXTargetDependency */,
+			);
+			name = GMLTest;
+			productName = GMLTest;
+			productReference = AB22DF972884FBF600181E48 /* GMLTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB22DFB02884FBF900181E48 /* GMLTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB22DFCA2884FBF900181E48 /* Build configuration list for PBXNativeTarget "GMLTestTests" */;
+			buildPhases = (
+				AB22DFAD2884FBF900181E48 /* Sources */,
+				AB22DFAE2884FBF900181E48 /* Frameworks */,
+				AB22DFAF2884FBF900181E48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB22DFB32884FBF900181E48 /* PBXTargetDependency */,
+			);
+			name = GMLTestTests;
+			productName = GMLTestTests;
+			productReference = AB22DFB12884FBF900181E48 /* GMLTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB22DFBA2884FBF900181E48 /* GMLTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB22DFCB2884FBF900181E48 /* Build configuration list for PBXNativeTarget "GMLTestUITests" */;
+			buildPhases = (
+				AB22DFB72884FBF900181E48 /* Sources */,
+				AB22DFB82884FBF900181E48 /* Frameworks */,
+				AB22DFB92884FBF900181E48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB22DFBD2884FBF900181E48 /* PBXTargetDependency */,
+			);
+			name = GMLTestUITests;
+			productName = GMLTestUITests;
+			productReference = AB22DFBB2884FBF900181E48 /* GMLTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		ABDB9D6E283B35BA007FDD41 /* GML-OC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABDB9D83283B35BA007FDD41 /* Build configuration list for PBXNativeTarget "GML-OC" */;
@@ -404,6 +745,17 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					AB22DF962884FBF600181E48 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					AB22DFB02884FBF900181E48 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = AB22DF962884FBF600181E48;
+					};
+					AB22DFBA2884FBF900181E48 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = AB22DF962884FBF600181E48;
+					};
 					ABDB9D6E283B35BA007FDD41 = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -431,11 +783,38 @@
 				ABDB9D6E283B35BA007FDD41 /* GML-OC */,
 				ABDB9D78283B35BA007FDD41 /* GML-OCTests */,
 				ABDB9DCA283C6E0A007FDD41 /* TestLineCommand */,
+				AB22DF962884FBF600181E48 /* GMLTest */,
+				AB22DFB02884FBF900181E48 /* GMLTestTests */,
+				AB22DFBA2884FBF900181E48 /* GMLTestUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AB22DF952884FBF600181E48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB22DFA92884FBF900181E48 /* LaunchScreen.storyboard in Resources */,
+				AB22DFA62884FBF900181E48 /* Assets.xcassets in Resources */,
+				AB22DFA42884FBF600181E48 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB22DFAF2884FBF900181E48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB22DFB92884FBF900181E48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABDB9D6D283B35BA007FDD41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -453,11 +832,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AB22DF932884FBF600181E48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB22DFA12884FBF600181E48 /* ViewController.m in Sources */,
+				AB22DF9B2884FBF600181E48 /* AppDelegate.m in Sources */,
+				AB22DFAC2884FBF900181E48 /* main.m in Sources */,
+				AB22DF9E2884FBF600181E48 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB22DFAD2884FBF900181E48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB22DFB62884FBF900181E48 /* GMLTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB22DFB72884FBF900181E48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB22DFC02884FBF900181E48 /* GMLTestUITests.m in Sources */,
+				AB22DFC22884FBF900181E48 /* GMLTestUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABDB9D6B283B35BA007FDD41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ABDB9DAE283B5A55007FDD41 /* GMLNavigationController.m in Sources */,
+				AB256D352844E28800B3A441 /* GMLObjectRuntimeHelp.m in Sources */,
 				ABDB9DDA283C7C5B007FDD41 /* GMLNavigationBarAppearanceItem.m in Sources */,
 				ABDB9DB8283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.m in Sources */,
 				ABDB9D74283B35BA007FDD41 /* GML_OC.docc in Sources */,
@@ -465,8 +873,14 @@
 				ABDB9DEB283CB6CB007FDD41 /* GMLConfigureNavigationControllerManager.m in Sources */,
 				ABDB9DE1283C7DE3007FDD41 /* GMLNavigationBarAppearanceManager.m in Sources */,
 				ABDB9DC2283B64DD007FDD41 /* GMLViewControllerViewStateItem.m in Sources */,
+				AB13553F28780D52003AAEE6 /* UIAlertController+GMLAdd.m in Sources */,
+				AB46BB5F2881464400C3B30B /* GMLTimerAdapter.m in Sources */,
 				ABDB9D8D283B3605007FDD41 /* Runtime+GMLAdd.m in Sources */,
 				ABDB9D96283B5396007FDD41 /* GMLTest.m in Sources */,
+				AB13552928752AFA003AAEE6 /* GMLUIGeometry.m in Sources */,
+				AB9FA590288A8E5900A08C7C /* NSArray+GMLAdd.m in Sources */,
+				AB256D302844DF2500B3A441 /* GMLProtocolFlagModel.m in Sources */,
+				AB9FA56E28880D1900A08C7C /* GMLDispatchMainFunction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +896,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB22DFD3288502AB00181E48 /* GMLTimerAdapter.m in Sources */,
 				ABDB9DCE283C6E0A007FDD41 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +904,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AB22DFB32884FBF900181E48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB22DF962884FBF600181E48 /* GMLTest */;
+			targetProxy = AB22DFB22884FBF900181E48 /* PBXContainerItemProxy */;
+		};
+		AB22DFBD2884FBF900181E48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB22DF962884FBF600181E48 /* GMLTest */;
+			targetProxy = AB22DFBC2884FBF900181E48 /* PBXContainerItemProxy */;
+		};
+		AB22DFCD2884FC1E00181E48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABDB9D6E283B35BA007FDD41 /* GML-OC */;
+			targetProxy = AB22DFCC2884FC1E00181E48 /* PBXContainerItemProxy */;
+		};
 		ABDB9D7C283B35BA007FDD41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ABDB9D6E283B35BA007FDD41 /* GML-OC */;
@@ -496,7 +926,152 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		AB22DFA22884FBF600181E48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB22DFA32884FBF600181E48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB22DFA72884FBF900181E48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB22DFA82884FBF900181E48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		AB22DFC32884FBF900181E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4988F477YX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GMLTest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cj.GMLTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB22DFC42884FBF900181E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4988F477YX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GMLTest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cj.GMLTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AB22DFC52884FBF900181E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4988F477YX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cj.GMLTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GMLTest.app/GMLTest";
+			};
+			name = Debug;
+		};
+		AB22DFC62884FBF900181E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4988F477YX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cj.GMLTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GMLTest.app/GMLTest";
+			};
+			name = Release;
+		};
+		AB22DFC72884FBF900181E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4988F477YX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cj.GMLTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GMLTest;
+			};
+			name = Debug;
+		};
+		AB22DFC82884FBF900181E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4988F477YX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cj.GMLTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GMLTest;
+			};
+			name = Release;
+		};
 		ABDB9D81283B35BA007FDD41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -718,6 +1293,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AB22DFC92884FBF900181E48 /* Build configuration list for PBXNativeTarget "GMLTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB22DFC32884FBF900181E48 /* Debug */,
+				AB22DFC42884FBF900181E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB22DFCA2884FBF900181E48 /* Build configuration list for PBXNativeTarget "GMLTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB22DFC52884FBF900181E48 /* Debug */,
+				AB22DFC62884FBF900181E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB22DFCB2884FBF900181E48 /* Build configuration list for PBXNativeTarget "GMLTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB22DFC72884FBF900181E48 /* Debug */,
+				AB22DFC82884FBF900181E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ABDB9D69283B35BA007FDD41 /* Build configuration list for PBXProject "GML-OC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

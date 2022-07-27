@@ -9,7 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @class UIColor, UIImage;
-@protocol GMLNavigationBarAppearanceProtocol <NSObject, NSCopying>
+
+// 实现 NSMutableCopying 时创建的对象必须实现 GMLMutableNavigationBarAppearanceProtocol 协议
+@protocol GMLNavigationBarAppearanceProtocol <NSObject, NSCopying, NSMutableCopying>
 @property (nullable, nonatomic, copy, readonly) UIColor *tintColor;
 @property (nullable, nonatomic, copy, readonly) UIColor *backgroundColor;
 @property (nullable, nonatomic, copy, readonly) NSDictionary<NSAttributedStringKey, id> *titleTextAttributes;
@@ -17,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy, readonly) UIImage *backIndicatorTransitionMaskImage;
 @end
 
-@protocol GMLMutableNavigationBarAppearanceProtocol <GMLNavigationBarAppearanceProtocol, NSMutableCopying>
+@protocol GMLMutableNavigationBarAppearanceProtocol <GMLNavigationBarAppearanceProtocol, NSCopying>
 @property (nullable, nonatomic, copy) UIColor *tintColor;
 @property (nullable, nonatomic, copy) UIColor *backgroundColor;
 @property (nullable, nonatomic, copy) NSDictionary<NSAttributedStringKey, id> *titleTextAttributes;

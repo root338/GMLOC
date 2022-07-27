@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol GMLNavigationBarAppearanceProtocol;
 @interface GMLNavigationController : UINavigationController
 
-@property (nullable, nonatomic, copy) id<GMLNavigationBarAppearanceProtocol> defaultAppearance;
+@property (nullable, nonatomic, copy) id<GMLNavigationBarAppearanceProtocol> defaultNavigationBarAppearance;
 
 @end
 
