@@ -5,7 +5,7 @@
 //  Created by GML on 2022/5/23.
 //
 
-#import <UIKit/UIKit.h>
+#import <UIKit/UIViewController.h>
 #import "GMLViewControllerViewStateDefine.h"
 
 NS_ASSUME_NONNULL_BEGIN

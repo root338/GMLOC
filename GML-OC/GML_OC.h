@@ -40,6 +40,11 @@ FOUNDATION_EXPORT const unsigned char GML_OCVersionString[];
 
 #import <GML_OC/UIAlertController+GMLAdd.h>
 
+#import <GML_OC/UIView+GMLAreaAdd.h>
+
+#import <GML_OC/CGButton.h>
+#import <GML_OC/CGButtonDefinesHeader.h>
+
 #pragma mark - UIGeometry
 #import <GML_OC/GMLUIGeometry.h>
 

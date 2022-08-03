@@ -34,4 +34,11 @@
     return [self reduceWithInit:NSMutableArray.array block:block];
 }
 
+- (id)objectAtCycleIndex:(NSInteger)index {
+    NSInteger count = self.count;
+    if (count == 0) { return nil; }
+    NSInteger i = index >= 0 ? index % count : (count + (index % count));
+    return self[i];
+}
+
 @end
