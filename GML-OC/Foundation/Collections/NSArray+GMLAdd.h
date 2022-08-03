@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSArray *)map_gml:(id _Nullable (NS_NOESCAPE ^)(ObjectType obj, NSUInteger idx, BOOL *stop))block;
 - (nullable NSArray<ObjectType> *)filter_gml:(BOOL (NS_NOESCAPE^)(ObjectType obj, NSUInteger idx, BOOL *stop))block;
 - (nullable id)reduceWithInit:(id)result block:(void (NS_NOESCAPE ^) (id result, ObjectType obj, NSUInteger idx, BOOL *stop))block;
+- (nullable id)reduceArrayWithBlock:(void (NS_NOESCAPE ^) (NSMutableArray* result, ObjectType obj, NSUInteger idx, BOOL *stop))block;
 
 @end
 

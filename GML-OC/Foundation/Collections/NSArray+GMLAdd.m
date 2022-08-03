@@ -30,5 +30,8 @@
     }];
     return result;
 }
+- (id)reduceArrayWithBlock:(void (NS_NOESCAPE^)(NSMutableArray * _Nonnull, id _Nonnull, NSUInteger, BOOL * _Nonnull))block {
+    return [self reduceWithInit:NSMutableArray.array block:block];
+}
 
 @end

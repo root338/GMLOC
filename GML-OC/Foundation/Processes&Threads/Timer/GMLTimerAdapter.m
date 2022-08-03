@@ -48,6 +48,7 @@
     self = [super init];
     if (self) {
         _repeats = true;
+        _addToMainRunLoop = true;
         _autoAddToRunLoop = true;
         _mode = NSDefaultRunLoopMode;
     }
@@ -69,6 +70,8 @@
 - (void)stop {
     if ([self isValid]) [_timer invalidate];
     _timer = nil;
+    _didAddToMode = nil;
+    
 }
 - (void)suspend {
     if (_timer.isValid) [_timer setFireDate:NSDate.distantFuture];
@@ -82,9 +85,11 @@
         if ([self isValid]) [self stop];
         _fireDate = fireDate;
         _timer = [self _newTimer];
+        
         if (_autoAddToRunLoop) {
             [self addToRunLoop];
         }
+        
     }else {
         _timer.fireDate = fireDate ?: [NSDate.date dateByAddingTimeInterval:self.interval];
     }
@@ -117,7 +122,7 @@
 - (BOOL)isValid { return _timer != nil && _timer.isValid; }
 
 - (void)_configRunLoop {
-    NSRunLoop *runLoop = _addToMainRunLoop ? NSRunLoop.currentRunLoop : NSRunLoop.mainRunLoop;
+    NSRunLoop *runLoop = _addToMainRunLoop ? NSRunLoop.mainRunLoop : NSRunLoop.currentRunLoop;
     [runLoop addTimer:_timer forMode:self.mode];
     self.didAddToMode = self.mode;
     self.didAddToIsMainRunLoop = _addToMainRunLoop;
