@@ -16,6 +16,7 @@
 
 @interface GMLConfigureNavigationControllerManager ()<GMLNavigationBarAppearanceManagerDelegate>
 @property (nonatomic, strong) GMLNavigationBarAppearanceManager *appearanceManager;
+@property (nonatomic, assign, readwrite) BOOL isNeedUpdate;
 @end
 
 @implementation GMLConfigureNavigationControllerManager
@@ -29,6 +30,7 @@
 }
 
 - (void)handlePushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [self _markModalStatusIsUpdate];
     [self handleControllerForOperation:GMLNavigationControllerOperationPush
                     fromViewController:self.navigationController.viewControllers.lastObject
                       toViewController:viewController
@@ -38,6 +40,7 @@
     NSArray *vcs = self.navigationController.viewControllers;
     NSInteger count = vcs.count;
     if (count <= 1) return;
+    [self _markModalStatusIsUpdate];
     [self handleControllerForOperation:GMLNavigationControllerOperationPop
                     fromViewController:vcs[count - 1]
                       toViewController:vcs[count - 2]
@@ -46,26 +49,32 @@
 - (void)handlePopToRootViewControllerAnimated:(BOOL)animated {
     NSArray *vcs = self.navigationController.viewControllers;
     if (vcs.count <= 1) return;
+    [self _markModalStatusIsUpdate];
     [self handleMonitorAnimationControllerForOperation:GMLNavigationControllerOperationPop fromViewController:vcs.lastObject toViewController:vcs.firstObject resultCallback:^(BOOL isFinished) {
         if (!isFinished) return;
         NSRange range = NSMakeRange(1, vcs.count - 1);
         [self.appearanceManager removeAppearancesInRange:range];
     }];
 }
+- (void)handlePopToViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    NSArray *vcs = self.navigationController.viewControllers;
+    NSInteger count = vcs.count;
+    if (count <= 1) return;
+    NSInteger index = [vcs indexOfObject:viewController];
+    if (index == NSNotFound || index == count - 1) return;
+    [self _markModalStatusIsUpdate];
+    [self handleControllerForOperation:GMLNavigationControllerOperationPop
+                    fromViewController:vcs[count - 1]
+                      toViewController:vcs[index]
+                              animated:animated];
+}
 - (void)handleSetViewControllers:(NSArray<UIViewController *> *)viewControllers animated:(BOOL)animated {
     BOOL isAnimated = animated && viewControllers.lastObject != self.navigationController.viewControllers.lastObject;
+    __weak typeof(self) weakself = self;
     void (^configurationBarAppearance) (void) = ^{
-        [self.appearanceManager removeAllAppearance];
-        [self.appearanceManager updateAppearance:^(GMLNavigationBarAppearanceManager * _Nonnull manager) {
-            for (UIViewController *vc in viewControllers) {
-                [self _getBarAppearanceWithViewController:vc item:^(GMLNavigationBarAppearanceItem *item) {
-                    [self.appearanceManager push:item];
-                } nilAppearance:^{
-                    [self.appearanceManager pushNilAppearance];
-                }];
-            }
-        }];
+        [weakself _resetBarAppearanceWithViewControllers:viewControllers];
     };
+    [self _markModalStatusIsUpdate];
     if (isAnimated) {
         [self handleMonitorAnimationControllerForOperation:GMLNavigationControllerOperationPush fromViewController:self.navigationController.viewControllers.lastObject toViewController:viewControllers.lastObject resultCallback:^(BOOL isFinished) {
             if (isFinished) return;
@@ -114,6 +123,13 @@
         // 不进行动画时直接进行设置
         configurationBarAppearance();
     }
+}
+
+- (void)updateNavigationControllerConfigure {
+    if (!self.isNeedUpdate) return;
+    [self _resetBarAppearanceWithViewControllers:self.navigationController.viewControllers];
+    [self navigationController:self.navigationController willShowViewController:self.navigationController.viewControllers.lastObject animated:false];
+    self.isNeedUpdate = false;
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -177,6 +193,25 @@
         effectiveType = configuration.navigationBarAppearanceEffectiveType;
     }
     item([[GMLNavigationBarAppearanceItem alloc] initWithAppearance:appearance effectiveType:effectiveType]);
+}
+
+- (void)_resetBarAppearanceWithViewControllers:(NSArray<UIViewController *> *)viewControllers {
+    [self.appearanceManager removeAllAppearance];
+    [self.appearanceManager updateAppearance:^(GMLNavigationBarAppearanceManager * _Nonnull manager) {
+        for (UIViewController *vc in viewControllers) {
+            [self _getBarAppearanceWithViewController:vc item:^(GMLNavigationBarAppearanceItem *item) {
+                [self.appearanceManager push:item];
+            } nilAppearance:^{
+                [self.appearanceManager pushNilAppearance];
+            }];
+        }
+    }];
+}
+
+- (void)_markModalStatusIsUpdate {
+    UIViewController *vc = self.navigationController.presentedViewController;
+    if (vc == nil || vc.modalPresentationStyle == UIModalPresentationOverCurrentContext) return;
+    self.isNeedUpdate = true;
 }
 
 #pragma mark - Getter & Setter
