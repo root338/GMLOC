@@ -15,12 +15,12 @@ FOUNDATION_EXPORT const unsigned char GML_OCVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <GML_OC/PublicHeader.h>
 /// GML 宏定义
-#import <GML_OC/GMLMacrosDefines.h>
+#import <GML_OC/GMLMacrosHeader.h>
 
 #pragma mark - Foundation
 
 #pragma mark - Defines
-#import <GML_OC/GMLDispatchMainFunction.h>
+#import <GML_OC/GMLMacrosHeader.h>
 
 #pragma mark - Collections
 #import <GML_OC/NSArray+GMLAdd.h>
@@ -29,6 +29,9 @@ FOUNDATION_EXPORT const unsigned char GML_OCVersionString[];
 
 #import <GML_OC/GMLTimerAdapter.h>
 #import <GML_OC/GMLTimeConfiguration.h>
+
+#pragma mark - Dispatch
+#import <GML_OC/GMLDispatch.h>
 
 #pragma mark - UIKit
 

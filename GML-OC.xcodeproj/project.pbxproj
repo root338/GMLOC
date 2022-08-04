@@ -47,17 +47,19 @@
 		AB96232D289A74930052E135 /* GMLRadianAngle.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96232C289A73F60052E135 /* GMLRadianAngle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB962332289A759B0052E135 /* CALayer+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962330289A759B0052E135 /* CALayer+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB962333289A759B0052E135 /* CALayer+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AB962331289A759B0052E135 /* CALayer+GMLAdd.m */; };
-		AB962336289A78D30052E135 /* GMLValueMacroDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962335289A786F0052E135 /* GMLValueMacroDefine.h */; };
 		AB962339289B57B20052E135 /* GMLMultiAngleHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962338289B57AA0052E135 /* GMLMultiAngleHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB96233B289B58C50052E135 /* GMLCoreAnimationHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96233A289B58B80052E135 /* GMLCoreAnimationHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB96233D289B59160052E135 /* GMLCoreGraphicsHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96233C289B58FC0052E135 /* GMLCoreGraphicsHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB962341289B635B0052E135 /* GMLDataCompareMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96233F289B62C10052E135 /* GMLDataCompareMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB962342289B63620052E135 /* GMLPropertyMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962340289B63200052E135 /* GMLPropertyMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB962344289B65030052E135 /* GMLUIKitMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962343289B639D0052E135 /* GMLUIKitMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9FA538288507AB00A08C7C /* GML_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; };
 		AB9FA539288507AB00A08C7C /* GML_OC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AB9FA56C2888005A00A08C7C /* GMLDispatchMainFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9FA56B2888002F00A08C7C /* GMLDispatchMainFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB9FA56E28880D1900A08C7C /* GMLDispatchMainFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9FA56D28880D1900A08C7C /* GMLDispatchMainFunction.m */; };
+		AB9FA56C2888005A00A08C7C /* GMLDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9FA56B2888002F00A08C7C /* GMLDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB9FA56E28880D1900A08C7C /* GMLDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9FA56D28880D1900A08C7C /* GMLDispatch.m */; };
 		AB9FA58F288A8E5900A08C7C /* NSArray+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9FA58D288A8E5900A08C7C /* NSArray+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9FA590288A8E5900A08C7C /* NSArray+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9FA58E288A8E5900A08C7C /* NSArray+GMLAdd.m */; };
-		ABA07A60288E3E320053373B /* GMLMacrosDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DF2283CE3A3007FDD41 /* GMLMacrosDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABA07A60288E3E320053373B /* GMLMacrosHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DF2283CE3A3007FDD41 /* GMLMacrosHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABA9BFAC283CF50500EE3F54 /* GML_OC.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9D72283B35BA007FDD41 /* GML_OC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABDB9D74283B35BA007FDD41 /* GML_OC.docc in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D73283B35BA007FDD41 /* GML_OC.docc */; };
 		ABDB9D7A283B35BA007FDD41 /* GML_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; };
@@ -189,12 +191,14 @@
 		AB96232C289A73F60052E135 /* GMLRadianAngle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLRadianAngle.h; sourceTree = "<group>"; };
 		AB962330289A759B0052E135 /* CALayer+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+GMLAdd.h"; sourceTree = "<group>"; };
 		AB962331289A759B0052E135 /* CALayer+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+GMLAdd.m"; sourceTree = "<group>"; };
-		AB962335289A786F0052E135 /* GMLValueMacroDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLValueMacroDefine.h; sourceTree = "<group>"; };
 		AB962338289B57AA0052E135 /* GMLMultiAngleHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLMultiAngleHeader.h; sourceTree = "<group>"; };
 		AB96233A289B58B80052E135 /* GMLCoreAnimationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLCoreAnimationHeader.h; sourceTree = "<group>"; };
 		AB96233C289B58FC0052E135 /* GMLCoreGraphicsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLCoreGraphicsHeader.h; sourceTree = "<group>"; };
-		AB9FA56B2888002F00A08C7C /* GMLDispatchMainFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLDispatchMainFunction.h; sourceTree = "<group>"; };
-		AB9FA56D28880D1900A08C7C /* GMLDispatchMainFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLDispatchMainFunction.m; sourceTree = "<group>"; };
+		AB96233F289B62C10052E135 /* GMLDataCompareMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLDataCompareMacro.h; sourceTree = "<group>"; };
+		AB962340289B63200052E135 /* GMLPropertyMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLPropertyMacro.h; sourceTree = "<group>"; };
+		AB962343289B639D0052E135 /* GMLUIKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLUIKitMacro.h; sourceTree = "<group>"; };
+		AB9FA56B2888002F00A08C7C /* GMLDispatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLDispatch.h; sourceTree = "<group>"; };
+		AB9FA56D28880D1900A08C7C /* GMLDispatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLDispatch.m; sourceTree = "<group>"; };
 		AB9FA58D288A8E5900A08C7C /* NSArray+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+GMLAdd.h"; sourceTree = "<group>"; };
 		AB9FA58E288A8E5900A08C7C /* NSArray+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+GMLAdd.m"; sourceTree = "<group>"; };
 		ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GML_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,7 +231,7 @@
 		ABDB9DE8283CB6CB007FDD41 /* GMLConfigureNavigationControllerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLConfigureNavigationControllerManager.h; sourceTree = "<group>"; };
 		ABDB9DE9283CB6CB007FDD41 /* GMLConfigureNavigationControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLConfigureNavigationControllerManager.m; sourceTree = "<group>"; };
 		ABDB9DEC283CB818007FDD41 /* GMLConfigureNavigationControllerDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLConfigureNavigationControllerDefines.h; sourceTree = "<group>"; };
-		ABDB9DF2283CE3A3007FDD41 /* GMLMacrosDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLMacrosDefines.h; sourceTree = "<group>"; };
+		ABDB9DF2283CE3A3007FDD41 /* GMLMacrosHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLMacrosHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -520,6 +524,26 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		AB96233E289B61DD0052E135 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB9DF2283CE3A3007FDD41 /* GMLMacrosHeader.h */,
+				AB96233F289B62C10052E135 /* GMLDataCompareMacro.h */,
+				AB962340289B63200052E135 /* GMLPropertyMacro.h */,
+				AB962343289B639D0052E135 /* GMLUIKitMacro.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		AB962348289B69310052E135 /* Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				AB9FA56B2888002F00A08C7C /* GMLDispatch.h */,
+				AB9FA56D28880D1900A08C7C /* GMLDispatch.m */,
+			);
+			path = Dispatch;
+			sourceTree = "<group>";
+		};
 		AB9FA58C288A8E4800A08C7C /* Collections */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,6 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				ABDB9D72283B35BA007FDD41 /* GML_OC.h */,
+				AB962348289B69310052E135 /* Dispatch */,
 				AB96232E289A75590052E135 /* CoreAnimation */,
 				AB962328289A63DF0052E135 /* CoreGraphics */,
 				AB46BB5A2881461800C3B30B /* Foundation */,
@@ -738,10 +763,7 @@
 		ABDB9DF1283CE368007FDD41 /* Defines */ = {
 			isa = PBXGroup;
 			children = (
-				ABDB9DF2283CE3A3007FDD41 /* GMLMacrosDefines.h */,
-				AB962335289A786F0052E135 /* GMLValueMacroDefine.h */,
-				AB9FA56B2888002F00A08C7C /* GMLDispatchMainFunction.h */,
-				AB9FA56D28880D1900A08C7C /* GMLDispatchMainFunction.m */,
+				AB96233E289B61DD0052E135 /* Macros */,
 			);
 			path = Defines;
 			sourceTree = "<group>";
@@ -773,20 +795,22 @@
 				AB962339289B57B20052E135 /* GMLMultiAngleHeader.h in Headers */,
 				AB9622EA289A598E0052E135 /* CGButton.h in Headers */,
 				AB962322289A606D0052E135 /* GMLMultiAngleProtocol.h in Headers */,
+				AB962341289B635B0052E135 /* GMLDataCompareMacro.h in Headers */,
 				AB13554528780E25003AAEE6 /* GMLAlertConfigurationProtocol.h in Headers */,
 				AB46BB6728814C1C00C3B30B /* GMLTimeConfiguration.h in Headers */,
-				AB962336289A78D30052E135 /* GMLValueMacroDefine.h in Headers */,
-				AB9FA56C2888005A00A08C7C /* GMLDispatchMainFunction.h in Headers */,
+				AB9FA56C2888005A00A08C7C /* GMLDispatch.h in Headers */,
 				AB96233D289B59160052E135 /* GMLCoreGraphicsHeader.h in Headers */,
+				AB962344289B65030052E135 /* GMLUIKitMacro.h in Headers */,
 				AB256D2F2844DF2500B3A441 /* GMLProtocolFlagModel.h in Headers */,
 				ABDB9DC1283B64DD007FDD41 /* GMLViewControllerViewStateItem.h in Headers */,
 				AB962324289A606D0052E135 /* GMLMultiAngleView.h in Headers */,
 				ABDB9D95283B5396007FDD41 /* GMLTest.h in Headers */,
 				AB9622F1289A5C0E0052E135 /* UIView+GMLAreaAdd.h in Headers */,
+				AB962342289B63620052E135 /* GMLPropertyMacro.h in Headers */,
 				AB9FA58F288A8E5900A08C7C /* NSArray+GMLAdd.h in Headers */,
 				ABDB9DAD283B5A55007FDD41 /* GMLNavigationController.h in Headers */,
 				AB962332289A759B0052E135 /* CALayer+GMLAdd.h in Headers */,
-				ABA07A60288E3E320053373B /* GMLMacrosDefines.h in Headers */,
+				ABA07A60288E3E320053373B /* GMLMacrosHeader.h in Headers */,
 				ABDB9DEE283CDC48007FDD41 /* GMLConfigureNavigationControllerDefines.h in Headers */,
 				AB962327289A60DE0052E135 /* GMLLineGradientTypeHeader.h in Headers */,
 				AB9622EC289A5A8E0052E135 /* CGButtonDefinesHeader.h in Headers */,
@@ -1056,7 +1080,7 @@
 				ABDB9D96283B5396007FDD41 /* GMLTest.m in Sources */,
 				AB9FA590288A8E5900A08C7C /* NSArray+GMLAdd.m in Sources */,
 				AB256D302844DF2500B3A441 /* GMLProtocolFlagModel.m in Sources */,
-				AB9FA56E28880D1900A08C7C /* GMLDispatchMainFunction.m in Sources */,
+				AB9FA56E28880D1900A08C7C /* GMLDispatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

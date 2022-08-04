@@ -1,12 +1,16 @@
 //
-//  GMLMacrosDefines.h
+//  GMLDataCompareMacro.h
 //  GML-OC
 //
-//  Created by GML on 2022/5/24.
+//  Created by GML on 2022/8/4.
 //
 
-#ifndef GMLMacrosDefines_h
-#define GMLMacrosDefines_h
+#ifndef GMLDataCompareMacro_h
+#define GMLDataCompareMacro_h
+
+#define GMLFloatIsEqual(a, b) (fabs((a) - (b)) < 0.00001)
+
+#define GMLClassIsEqual(a, b) ((a) == (b) || ((a) != nil && (b) != nil && [(a) isEqual:(b)]))
 
 #define GMLEqualObjectAndContainNil(lObj, rObj) ( \
     ((lObj) == nil && (rObj) == nil) \
@@ -28,4 +32,4 @@
     || ((rObj) != nil && [(lObj) isEqualToArray:(rObj)]) \
 )
 
-#endif /* GMLMacrosDefines_h */
+#endif /* GMLDataCompareMacro_h */

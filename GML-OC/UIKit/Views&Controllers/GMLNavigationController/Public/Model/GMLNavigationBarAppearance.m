@@ -6,7 +6,7 @@
 //
 
 #import "GMLNavigationBarAppearance.h"
-#import "GMLMacrosDefines.h"
+#import <GML_OC/GMLDataCompareMacro.h>
 
 @implementation GMLNavigationBarAppearance
 - (BOOL)isEqual:(id)object {

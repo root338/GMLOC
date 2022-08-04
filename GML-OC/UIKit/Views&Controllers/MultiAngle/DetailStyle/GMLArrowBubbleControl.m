@@ -8,7 +8,8 @@
 
 #import "GMLArrowBubbleControl.h"
 
-#import "GMLMultiAngleView.h"
+#import <GML_OC/GMLMultiAngleView.h>
+#import <GML_OC/GMLMultiAngleProtocol.h>
 #import <GML_OC/GMLRadianAngle.h>
 #import <GML_OC/CGGeometry+GMLAdd.h>
 #import <GML_OC/NSArray+GMLAdd.h>
@@ -90,7 +91,7 @@ typedef struct {
     CGRect availableRect = CGRectMake(_marginInsets.left, _marginInsets.top, maxSize.width, maxSize.height);
     YMArrowBubbleAreaInfo areaInfo = [self _getPointsWithContentSize:bubbleViewContentSize availableRect:availableRect];
     
-    id<GMLMultiAngleProtocol> layer = _bubbleView.targetLayer;
+    id<GMLMultiAngleProtocol> configure = _bubbleView.configure;
     BOOL isRelease = NO;
     CGPathRef targetPath;
     if ([self.delegate respondsToSelector:@selector(pathWithBubbleControl:isRelease:)]) {
@@ -99,7 +100,7 @@ typedef struct {
         isRelease = YES;
         targetPath = [self _createPathWithAreaInfo:areaInfo];
     }
-    layer.path = targetPath;
+    configure.path = targetPath;
     if (isRelease) {
         CGPathRelease(targetPath);
     }
@@ -111,9 +112,9 @@ typedef struct {
 }
 
 - (void)setupLineGradientWithType:(GMLLineGradientType)type colorValueSet:(NSArray<UIColor *> *)colorValueSet {
-    id<GMLMultiAngleProtocol> layer = [(GMLMultiAngleView *)self.bubbleView targetLayer];
-    layer.gradientType = type;
-    layer.gradientColors = colorValueSet;
+    id<GMLMultiAngleProtocol> configure = [(GMLMultiAngleView *)self.bubbleView configure];
+    configure.gradientType = type;
+    configure.gradientColors = colorValueSet;
 }
 
 #pragma mark - Private
@@ -357,7 +358,7 @@ typedef struct {
         return ;
     }
     _gradientLocations = [gradientLocations copy];
-    [(GMLMultiAngleView *)self.bubbleView targetLayer].gradientLocations = gradientLocations;
+    [(GMLMultiAngleView *)self.bubbleView configure].gradientLocations = gradientLocations;
 }
 
 - (void)setCornerRadius:(CGFloat)cornerRadius {

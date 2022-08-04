@@ -92,7 +92,7 @@ CG_INLINE CGPoint GMLSizeGetMidPoint(CGSize s1) {
     return CGPointMake(s1.width / 2.0, s1.height / 2.0);
 }
 
-/** 获取 s2 在 s1 居中时的起始坐标 */
+/** 获取 s1 在 s2 居中时的起始坐标 */
 CG_INLINE CGPoint GMLSizeGetMidPointOfSize(CGSize s1, CGSize s2) {
     return CGPointMake((s2.width - s1.width) / 2.0, (s2.height - s1.height) / 2.0);
 }
@@ -125,78 +125,96 @@ CG_INLINE CGRect GMLSizeCenterOfRect(CGSize size, CGRect rect) {
 #if __has_include(<UIKit/UIView.h>)
 #import <UIKit/UIView.h>
 
-CG_INLINE CGRect GMLRectContentMode(CGRect totalRect, CGSize targetSize, UIViewContentMode mode) {
-    CGRect frame = CGRectZero;
-    CGSize totalSize = totalRect.size;
+CG_INLINE CGRect GMLSizeInRect(CGSize size, UIViewContentMode mode, CGPoint offset, CGRect rect) {
+    CGSize maxSize = rect.size;
     CGFloat x = 0;
     CGFloat y = 0;
-    CGFloat width = targetSize.width;
-    CGFloat height = targetSize.height;
+    CGFloat width = size.width;
+    CGFloat height = size.height;
     switch (mode) {
         case UIViewContentModeScaleAspectFit:
         case UIViewContentModeScaleAspectFill:
         {
-            CGFloat s1 = targetSize.width / totalSize.width;
-            CGFloat s2 = targetSize.height / totalSize.height;
+            
+//            NSAssert(!CGSizeEqualToSize(maxSize, CGSizeZero), @"不能为 0");
+            if (CGSizeEqualToSize(maxSize, CGSizeZero)) return CGRectZero;
+            CGFloat s1 = size.width / maxSize.width;
+            CGFloat s2 = size.height / maxSize.height;
             if (s1 < s2) {
                 if (UIViewContentModeScaleAspectFit == mode) {
-                    width   = targetSize.width / s2;
-                    height  = totalSize.height;
+//                    NSAssert(s2 != 0, @"不能为 0");
+                    if (s2 == 0) return CGRectZero;
+                    width   = size.width / s2;
+                    height  = maxSize.height;
                 }else {
-                    width   = totalSize.width;
-                    height  = targetSize.height / s1;
+//                    NSAssert(s1 != 0, @"不能为 0");
+                    if (s1 == 0) return CGRectZero;
+                    width   = maxSize.width;
+                    height  = size.height / s1;
                 }
             }else {
                 if (UIViewContentModeScaleAspectFit == mode) {
-                    width   = totalSize.width;
-                    height  = targetSize.height / s1;
+//                    NSAssert(s1 != 0, @"不能为 0");
+                    if (s1 == 0) return CGRectZero;
+                    width   = maxSize.width;
+                    height  = size.height / s1;
                 }else {
-                    width   = targetSize.width / s2;
-                    height  = totalSize.height;
+//                    NSAssert(s2 != 0, @"不能为 0");
+                    if (s2 == 0) return CGRectZero;
+                    width   = size.width / s2;
+                    height  = maxSize.height;
                 }
             }
             
-            x = (width - totalSize.width) / 2;
-            y = (height - totalSize.height) / 2;
+            x = GMLFloatMidOfMax(width, maxSize.width);
+            y = GMLFloatMidOfMax(height, maxSize.height);
             break;
         }
         case UIViewContentModeScaleToFill:
-            width = totalSize.width;
-            height = totalSize.height;
+            width = maxSize.width;
+            height = maxSize.height;
             break;
         case UIViewContentModeTop:
-            x = (targetSize.width - totalSize.width) / 2;
+            x = GMLFloatMidOfMax(size.width, maxSize.width);
             break;
         case UIViewContentModeTopRight:
-            x = totalSize.width - targetSize.width;
+            x = maxSize.width - size.width;
             break;
         case UIViewContentModeRight:
-            x = totalSize.width - targetSize.width;
-            y = (targetSize.height - totalSize.height) / 2;
+            x = maxSize.width - size.width;
+            y = GMLFloatMidOfMax(size.height, maxSize.height);
             break;
         case UIViewContentModeBottomRight:
-            x = totalSize.width - targetSize.width;
-            y = totalSize.height - targetSize.height;
+            x = maxSize.width - size.width;
+            y = maxSize.height - size.height;
             break;
         case UIViewContentModeBottom:
-            x = (targetSize.width - totalSize.width) / 2;
-            y = totalSize.height - targetSize.height;
+            x = GMLFloatMidOfMax(size.width, maxSize.width);
+            y = maxSize.height - size.height;
             break;
         case UIViewContentModeBottomLeft:
-            y = totalSize.height - targetSize.height;
+            y = maxSize.height - size.height;
             break;
         case UIViewContentModeLeft:
-            y = (targetSize.height - totalSize.height) / 2;
+            y = GMLFloatMidOfMax(size.height, maxSize.height);
             break;
-        case UIViewContentModeCenter:
-            x = (targetSize.width - totalSize.width) / 2;
-            y = (targetSize.height - totalSize.height) /2;
-            break;
+        case UIViewContentModeCenter: {
+            CGPoint p = GMLSizeGetMidPointOfSize(size, maxSize);
+            x =  p.x;
+            y = p.y;
+        }   break;
         default:
             break;
     }
-    frame = CGRectMake(x + CGRectGetMinX(totalRect), y + CGRectGetMinY(totalRect), width, height);
-    return frame;
+    return CGRectMake(
+                      x + rect.origin.x + offset.x,
+                      y + rect.origin.y + offset.y,
+                      width, height
+                      );
+}
+
+CG_INLINE CGRect GMLSizeFillInRect(CGSize size, BOOL isFillWidth, BOOL isFillHeight, UIViewContentMode mode, CGPoint offset, CGRect rect) {
+    return GMLSizeInRect(CGSizeMake(isFillWidth ? rect.size.width : size.width, isFillHeight ? rect.size.height : size.height), mode, offset, rect);
 }
 
 #endif

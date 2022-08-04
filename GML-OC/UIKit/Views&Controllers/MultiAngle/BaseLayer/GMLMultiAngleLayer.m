@@ -11,7 +11,7 @@
 #import <UIKit/UIBezierPath.h>
 #import <GML_OC/CALayer+GMLAdd.h>
 #import <GML_OC/CGGeometry+GMLAdd.h>
-#import "GMLValueMacroDefine.h"
+#import <GML_OC/GMLPropertyMacro.h>
 
 @interface GMLMultiAngleLayer ()
 {
@@ -355,13 +355,13 @@
 }
 
 - (void)setRectCorner:(UIRectCorner)rectCorner {
-    YMWriteValueProperty(rectCorner)
+    GMLWriteValueProperty(rectCorner)
     _shouldUpdatePath = YES;
     [self setNeedsLayout];
 }
 
 - (void)setFillColor:(UIColor *)fillColor {
-    YMWriteClassCopyProperty(fillColor)
+    GMLWriteClassCopyProperty(fillColor)
     _shouldUpdateSelfAppearance = YES;
     [self setNeedsLayout];
 }
@@ -372,7 +372,7 @@
 }
 
 - (void)setAlwaysFillet:(BOOL)alwaysFillet {
-    YMWriteValueProperty(alwaysFillet)
+    GMLWriteValueProperty(alwaysFillet)
     _shouldUpdateSelfAppearance = YES;
     [self setNeedsLayout];
 }
@@ -398,8 +398,7 @@
 }
 
 - (void)setClipsToContentFrame:(BOOL)clipsToContentFrame {
-    if (clipsToContentFrame == _clipsToContentFrame) { return; }
-    _clipsToContentFrame = clipsToContentFrame;
+    GMLWriteValueProperty(clipsToContentFrame)
     _shouldUpdatePath = YES;
     _shouldUpdateSelfAppearance = YES;
     [self setNeedsLayout];
