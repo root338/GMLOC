@@ -45,8 +45,14 @@ FOUNDATION_EXPORT const unsigned char GML_OCVersionString[];
 #import <GML_OC/CGButton.h>
 #import <GML_OC/CGButtonDefinesHeader.h>
 
-#pragma mark - UIGeometry
-#import <GML_OC/GMLUIGeometry.h>
+#import <GML_OC/GMLMultiAngleHeader.h>
 
 #pragma mark - Runtime
 #import <GML_OC/Runtime+GMLAdd.h>
+
+#pragma mark - Core Animation
+#import <GML_OC/GMLCoreAnimationHeader.h>
+
+#pragma mark - Core Graphics
+#import <GML_OC/GMLCoreGraphicsHeader.h>
+

@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 每个角的半径值
 @property (nonatomic, assign) YMMultiCornerRadius radiusEdgeValue;
 /// 渐变的类型
-@property (nonatomic, assign) YMLineGradientType gradientType;
+@property (nonatomic, assign) GMLLineGradientType gradientType;
 /// 关闭默认动画
 @property (nonatomic, assign) BOOL disableDefaultAnimation;
 /// 渐变的颜色

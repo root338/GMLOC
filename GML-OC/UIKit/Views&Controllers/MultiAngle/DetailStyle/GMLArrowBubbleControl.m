@@ -110,7 +110,7 @@ typedef struct {
     self.bubbleView.frame = areaInfo.bubbleFrame;
 }
 
-- (void)setupLineGradientWithType:(YMLineGradientType)type colorValueSet:(NSArray<UIColor *> *)colorValueSet {
+- (void)setupLineGradientWithType:(GMLLineGradientType)type colorValueSet:(NSArray<UIColor *> *)colorValueSet {
     id<GMLMultiAngleProtocol> layer = [(GMLMultiAngleView *)self.bubbleView targetLayer];
     layer.gradientType = type;
     layer.gradientColors = colorValueSet;

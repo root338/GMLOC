@@ -49,7 +49,7 @@
     self = [super init];
     if (self) {
         _lineWidth = 0.5;
-        _gradientType = YMLineGradientTypeHorizontal;
+        _gradientType = GMLLineGradientTypeHorizontal;
     }
     return self;
 }
@@ -257,8 +257,8 @@
 /// 是否存在渐变
 - (BOOL)_isExistGradient {
     switch (_gradientType) {
-        case YMLineGradientTypeVertical:
-        case YMLineGradientTypeHorizontal:
+        case GMLLineGradientTypeVertical:
+        case GMLLineGradientTypeHorizontal:
             return _gradientColors.count > 0 && _gradientColors.count == self.gradientLocations.count;
         default:
             return NO;
@@ -413,7 +413,7 @@
     [self setNeedsLayout];
 }
 
-- (void)setGradientType:(YMLineGradientType)gradientType {
+- (void)setGradientType:(GMLLineGradientType)gradientType {
     if (_gradientType == gradientType) {
         return;
     }

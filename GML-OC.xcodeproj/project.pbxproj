@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB13552828752AFA003AAEE6 /* GMLUIGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = AB13552628752AFA003AAEE6 /* GMLUIGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB13552928752AFA003AAEE6 /* GMLUIGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = AB13552728752AFA003AAEE6 /* GMLUIGeometry.m */; };
 		AB13553E28780D52003AAEE6 /* UIAlertController+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB13553C28780D51003AAEE6 /* UIAlertController+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB13553F28780D52003AAEE6 /* UIAlertController+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AB13553D28780D51003AAEE6 /* UIAlertController+GMLAdd.m */; };
 		AB13554528780E25003AAEE6 /* GMLAlertConfigurationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AB13554428780E25003AAEE6 /* GMLAlertConfigurationProtocol.h */; };
@@ -44,12 +42,15 @@
 		AB962322289A606D0052E135 /* GMLMultiAngleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96231A289A606C0052E135 /* GMLMultiAngleProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB962323289A606D0052E135 /* GMLMultiAngleView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96231B289A606C0052E135 /* GMLMultiAngleView.m */; };
 		AB962324289A606D0052E135 /* GMLMultiAngleView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96231C289A606C0052E135 /* GMLMultiAngleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB962327289A60DE0052E135 /* YMLineGradientTypeHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962326289A60DE0052E135 /* YMLineGradientTypeHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB962327289A60DE0052E135 /* GMLLineGradientTypeHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962326289A60DE0052E135 /* GMLLineGradientTypeHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB96232B289A64A40052E135 /* CGGeometry+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96232A289A642A0052E135 /* CGGeometry+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB96232D289A74930052E135 /* GMLRadianAngle.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96232C289A73F60052E135 /* GMLRadianAngle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB962332289A759B0052E135 /* CALayer+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962330289A759B0052E135 /* CALayer+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB962333289A759B0052E135 /* CALayer+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AB962331289A759B0052E135 /* CALayer+GMLAdd.m */; };
 		AB962336289A78D30052E135 /* GMLValueMacroDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962335289A786F0052E135 /* GMLValueMacroDefine.h */; };
+		AB962339289B57B20052E135 /* GMLMultiAngleHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962338289B57AA0052E135 /* GMLMultiAngleHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB96233B289B58C50052E135 /* GMLCoreAnimationHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96233A289B58B80052E135 /* GMLCoreAnimationHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB96233D289B59160052E135 /* GMLCoreGraphicsHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96233C289B58FC0052E135 /* GMLCoreGraphicsHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9FA538288507AB00A08C7C /* GML_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; };
 		AB9FA539288507AB00A08C7C /* GML_OC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB9FA56C2888005A00A08C7C /* GMLDispatchMainFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9FA56B2888002F00A08C7C /* GMLDispatchMainFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -141,8 +142,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AB13552628752AFA003AAEE6 /* GMLUIGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLUIGeometry.h; sourceTree = "<group>"; };
-		AB13552728752AFA003AAEE6 /* GMLUIGeometry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLUIGeometry.m; sourceTree = "<group>"; };
 		AB13553C28780D51003AAEE6 /* UIAlertController+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+GMLAdd.h"; sourceTree = "<group>"; };
 		AB13553D28780D51003AAEE6 /* UIAlertController+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+GMLAdd.m"; sourceTree = "<group>"; };
 		AB13554428780E25003AAEE6 /* GMLAlertConfigurationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLAlertConfigurationProtocol.h; sourceTree = "<group>"; };
@@ -185,12 +184,15 @@
 		AB96231A289A606C0052E135 /* GMLMultiAngleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLMultiAngleProtocol.h; sourceTree = "<group>"; };
 		AB96231B289A606C0052E135 /* GMLMultiAngleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMLMultiAngleView.m; path = ../../../../../ymmainapp/QuickAskCommunity/QuickAskCommunity/Classes/Module/Public/View/YMViews/MultiAngle/GMLMultiAngleView.m; sourceTree = "<group>"; };
 		AB96231C289A606C0052E135 /* GMLMultiAngleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMLMultiAngleView.h; path = ../../../../../ymmainapp/QuickAskCommunity/QuickAskCommunity/Classes/Module/Public/View/YMViews/MultiAngle/GMLMultiAngleView.h; sourceTree = "<group>"; };
-		AB962326289A60DE0052E135 /* YMLineGradientTypeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMLineGradientTypeHeader.h; sourceTree = "<group>"; };
+		AB962326289A60DE0052E135 /* GMLLineGradientTypeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLLineGradientTypeHeader.h; sourceTree = "<group>"; };
 		AB96232A289A642A0052E135 /* CGGeometry+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+GMLAdd.h"; sourceTree = "<group>"; };
 		AB96232C289A73F60052E135 /* GMLRadianAngle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLRadianAngle.h; sourceTree = "<group>"; };
 		AB962330289A759B0052E135 /* CALayer+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+GMLAdd.h"; sourceTree = "<group>"; };
 		AB962331289A759B0052E135 /* CALayer+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+GMLAdd.m"; sourceTree = "<group>"; };
 		AB962335289A786F0052E135 /* GMLValueMacroDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLValueMacroDefine.h; sourceTree = "<group>"; };
+		AB962338289B57AA0052E135 /* GMLMultiAngleHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLMultiAngleHeader.h; sourceTree = "<group>"; };
+		AB96233A289B58B80052E135 /* GMLCoreAnimationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLCoreAnimationHeader.h; sourceTree = "<group>"; };
+		AB96233C289B58FC0052E135 /* GMLCoreGraphicsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLCoreGraphicsHeader.h; sourceTree = "<group>"; };
 		AB9FA56B2888002F00A08C7C /* GMLDispatchMainFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLDispatchMainFunction.h; sourceTree = "<group>"; };
 		AB9FA56D28880D1900A08C7C /* GMLDispatchMainFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLDispatchMainFunction.m; sourceTree = "<group>"; };
 		AB9FA58D288A8E5900A08C7C /* NSArray+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+GMLAdd.h"; sourceTree = "<group>"; };
@@ -276,15 +278,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB13552528752ADD003AAEE6 /* Geometry */ = {
-			isa = PBXGroup;
-			children = (
-				AB13552628752AFA003AAEE6 /* GMLUIGeometry.h */,
-				AB13552728752AFA003AAEE6 /* GMLUIGeometry.m */,
-			);
-			path = Geometry;
-			sourceTree = "<group>";
-		};
 		AB13553B28780D3D003AAEE6 /* GMLAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,14 +410,6 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		AB9622F3289A5CF90052E135 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				AB9622F4289A5CFF0052E135 /* UIView */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		AB9622F4289A5CFF0052E135 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +428,7 @@
 				AB962319289A606C0052E135 /* Protocol */,
 				AB96231C289A606C0052E135 /* GMLMultiAngleView.h */,
 				AB96231B289A606C0052E135 /* GMLMultiAngleView.m */,
+				AB962338289B57AA0052E135 /* GMLMultiAngleHeader.h */,
 			);
 			path = MultiAngle;
 			sourceTree = "<group>";
@@ -485,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				AB962329289A63FA0052E135 /* Geometry */,
+				AB96233C289B58FC0052E135 /* GMLCoreGraphicsHeader.h */,
 			);
 			path = CoreGraphics;
 			sourceTree = "<group>";
@@ -503,6 +490,7 @@
 			children = (
 				AB962334289A765F0052E135 /* Defines */,
 				AB96232F289A75860052E135 /* CAlayer */,
+				AB96233A289B58B80052E135 /* GMLCoreAnimationHeader.h */,
 			);
 			path = CoreAnimation;
 			sourceTree = "<group>";
@@ -519,9 +507,17 @@
 		AB962334289A765F0052E135 /* Defines */ = {
 			isa = PBXGroup;
 			children = (
-				AB962326289A60DE0052E135 /* YMLineGradientTypeHeader.h */,
+				AB962326289A60DE0052E135 /* GMLLineGradientTypeHeader.h */,
 			);
 			path = Defines;
+			sourceTree = "<group>";
+		};
+		AB962337289A858A0052E135 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AB9622F4289A5CFF0052E135 /* UIView */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		AB9FA58C288A8E4800A08C7C /* Collections */ = {
@@ -609,8 +605,6 @@
 		ABDB9DA8283B5A0F007FDD41 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				AB9622F3289A5CF90052E135 /* Base */,
-				AB13552528752ADD003AAEE6 /* Geometry */,
 				ABDB9DA9283B5A19007FDD41 /* Views&Controllers */,
 			);
 			path = UIKit;
@@ -619,6 +613,7 @@
 		ABDB9DA9283B5A19007FDD41 /* Views&Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB962337289A858A0052E135 /* Base */,
 				AB9622F5289A5FFF0052E135 /* MultiAngle */,
 				AB9622E6289A59760052E135 /* Button */,
 				AB13553B28780D3D003AAEE6 /* GMLAlertController */,
@@ -762,10 +757,10 @@
 				ABDB9DE0283C7DE3007FDD41 /* GMLNavigationBarAppearanceManager.h in Headers */,
 				AB256D342844E28800B3A441 /* GMLObjectRuntimeHelp.h in Headers */,
 				ABDB9DEF283CDC54007FDD41 /* GMLViewControllerViewStateDefine.h in Headers */,
-				AB13552828752AFA003AAEE6 /* GMLUIGeometry.h in Headers */,
 				AB96231D289A606D0052E135 /* GMLArrowBubbleControl.h in Headers */,
 				ABDB9DD9283C7C5B007FDD41 /* GMLNavigationBarAppearanceItem.h in Headers */,
 				ABDB9DEA283CB6CB007FDD41 /* GMLConfigureNavigationControllerManager.h in Headers */,
+				AB96233B289B58C50052E135 /* GMLCoreAnimationHeader.h in Headers */,
 				AB962320289A606D0052E135 /* GMLMultiAngleLayer.h in Headers */,
 				ABDB9DED283CDC23007FDD41 /* GMLConfigureNavigationControllerProtocol.h in Headers */,
 				ABDB9D8C283B3605007FDD41 /* Runtime+GMLAdd.h in Headers */,
@@ -775,12 +770,14 @@
 				AB962321289A606D0052E135 /* GMLMultiAngleDefineHeader.h in Headers */,
 				ABDB9DF0283CDE43007FDD41 /* GMLNavigationBarAppearanceProtocol.h in Headers */,
 				ABA9BFAC283CF50500EE3F54 /* GML_OC.h in Headers */,
+				AB962339289B57B20052E135 /* GMLMultiAngleHeader.h in Headers */,
 				AB9622EA289A598E0052E135 /* CGButton.h in Headers */,
 				AB962322289A606D0052E135 /* GMLMultiAngleProtocol.h in Headers */,
 				AB13554528780E25003AAEE6 /* GMLAlertConfigurationProtocol.h in Headers */,
 				AB46BB6728814C1C00C3B30B /* GMLTimeConfiguration.h in Headers */,
 				AB962336289A78D30052E135 /* GMLValueMacroDefine.h in Headers */,
 				AB9FA56C2888005A00A08C7C /* GMLDispatchMainFunction.h in Headers */,
+				AB96233D289B59160052E135 /* GMLCoreGraphicsHeader.h in Headers */,
 				AB256D2F2844DF2500B3A441 /* GMLProtocolFlagModel.h in Headers */,
 				ABDB9DC1283B64DD007FDD41 /* GMLViewControllerViewStateItem.h in Headers */,
 				AB962324289A606D0052E135 /* GMLMultiAngleView.h in Headers */,
@@ -791,7 +788,7 @@
 				AB962332289A759B0052E135 /* CALayer+GMLAdd.h in Headers */,
 				ABA07A60288E3E320053373B /* GMLMacrosDefines.h in Headers */,
 				ABDB9DEE283CDC48007FDD41 /* GMLConfigureNavigationControllerDefines.h in Headers */,
-				AB962327289A60DE0052E135 /* YMLineGradientTypeHeader.h in Headers */,
+				AB962327289A60DE0052E135 /* GMLLineGradientTypeHeader.h in Headers */,
 				AB9622EC289A5A8E0052E135 /* CGButtonDefinesHeader.h in Headers */,
 				AB13553E28780D52003AAEE6 /* UIAlertController+GMLAdd.h in Headers */,
 				ABDB9DB7283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.h in Headers */,
@@ -1057,7 +1054,6 @@
 				ABDB9D8D283B3605007FDD41 /* Runtime+GMLAdd.m in Sources */,
 				AB962333289A759B0052E135 /* CALayer+GMLAdd.m in Sources */,
 				ABDB9D96283B5396007FDD41 /* GMLTest.m in Sources */,
-				AB13552928752AFA003AAEE6 /* GMLUIGeometry.m in Sources */,
 				AB9FA590288A8E5900A08C7C /* NSArray+GMLAdd.m in Sources */,
 				AB256D302844DF2500B3A441 /* GMLProtocolFlagModel.m in Sources */,
 				AB9FA56E28880D1900A08C7C /* GMLDispatchMainFunction.m in Sources */,

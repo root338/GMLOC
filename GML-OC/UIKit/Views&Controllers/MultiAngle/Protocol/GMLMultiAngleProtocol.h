@@ -9,7 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIGeometry.h>
 
-#import <GML_OC/YMLineGradientTypeHeader.h>
+#import <GML_OC/GMLLineGradientTypeHeader.h>
 #import <GML_OC/GMLMultiAngleDefineHeader.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 每个角的半径值
 @property (nonatomic, assign) YMMultiCornerRadius radiusEdgeValue;
 /// 渐变的类型
-@property (nonatomic, assign) YMLineGradientType gradientType;
+@property (nonatomic, assign) GMLLineGradientType gradientType;
 /// 渐变的颜色
 @property (nullable, nonatomic, copy) NSArray<UIColor *> *gradientColors;
 /// 渐变颜色位置，默认 [0, 1]

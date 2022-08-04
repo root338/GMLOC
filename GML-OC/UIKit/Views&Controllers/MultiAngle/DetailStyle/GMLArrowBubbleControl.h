@@ -11,7 +11,7 @@
 #import <CoreGraphics/CGGeometry.h>
 
 #import "GMLMultiAngleDefineHeader.h"
-#import "YMLineGradientTypeHeader.h"
+#import "GMLLineGradientTypeHeader.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @class GMLArrowBubbleControl, UIView, UIColor;
@@ -91,7 +91,7 @@ typedef NS_ENUM(NSInteger, GMLArrowLocation) {
 @property (nullable, nonatomic, copy) NSArray<NSNumber *> *gradientLocations;
 
 /// 设置渐变
-- (void)setupLineGradientWithType:(YMLineGradientType)type colorValueSet:(NSArray<UIColor *> *)colorValueSet;
+- (void)setupLineGradientWithType:(GMLLineGradientType)type colorValueSet:(NSArray<UIColor *> *)colorValueSet;
 
 - (void)showToView:(UIView *)toView;
 - (void)showToView:(UIView *)toView vertexPoint:(CGPoint)vertexPoint;

@@ -22,7 +22,7 @@
 + (instancetype)createLayerWithBackgroundColor:(CGColorRef)backgroundColor {
     CALayer *layer = [self layer];
 #if __has_include(<UIKit/UIScreen.h>)
-    layer.contentsScale = [UIScreen mainScreen].scale;
+    layer.contentsScale = UIScreen.mainScreen.scale;
 #endif
     layer.backgroundColor = backgroundColor;
     return layer;
@@ -33,13 +33,13 @@
 
 @implementation CAGradientLayer (GMLAdd)
 
-+ (instancetype)createLineGradientWithType:(YMLineGradientType)type startColor:(nullable CGColorRef)startColor endColor:(nullable CGColorRef)endColor {
++ (instancetype)createLineGradientWithType:(GMLLineGradientType)type startColor:(nullable CGColorRef)startColor endColor:(nullable CGColorRef)endColor {
     CAGradientLayer *layer = [self createLayerWithBackgroundColor:nil];
     [layer setupLineGradientWithType:type startColor:startColor endColor:endColor];
     return layer;
 }
 
-- (void)setupLineGradientWithType:(YMLineGradientType)type startColor:(nullable CGColorRef)startColor endColor:(nullable CGColorRef)endColor {
+- (void)setupLineGradientWithType:(GMLLineGradientType)type startColor:(nullable CGColorRef)startColor endColor:(nullable CGColorRef)endColor {
     if (startColor == nil || endColor == nil) return;
     self.colors = @[
         (__bridge id)startColor,
@@ -52,7 +52,7 @@
     [self configurePathWithType:type];
 }
 
-- (void)setupLineGradientWithType:(YMLineGradientType)type colors:(nonnull NSArray *)colors {
+- (void)setupLineGradientWithType:(GMLLineGradientType)type colors:(nonnull NSArray *)colors {
     [self validatorGradientColors:colors multColors:^(NSArray *colors) {
         self.colors = colors;
         [self configurePathWithType:type];
@@ -83,18 +83,18 @@
     }
 }
 
-- (void)transformType:(YMLineGradientType)type result:(void(^)(CGPoint start, CGPoint end))result {
+- (void)transformType:(GMLLineGradientType)type result:(void(^)(CGPoint start, CGPoint end))result {
     CGPoint startPoint  = CGPointZero;
     CGPoint endPoint = CGPointZero;
-    if (type & YMLineGradientTypeVertical) {
+    if (type & GMLLineGradientTypeVertical) {
         endPoint.y = 1;
     }
-    if (type & YMLineGradientTypeHorizontal) {
+    if (type & GMLLineGradientTypeHorizontal) {
         endPoint.x = 1;
     }
     !result?: result(startPoint, endPoint);
 }
-- (void)configurePathWithType:(YMLineGradientType)type {
+- (void)configurePathWithType:(GMLLineGradientType)type {
     [self transformType:type result:^(CGPoint start, CGPoint end) {
         self.startPoint = start;
         self.endPoint = end;
