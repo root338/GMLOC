@@ -53,6 +53,20 @@
 		AB962341289B635B0052E135 /* GMLDataCompareMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96233F289B62C10052E135 /* GMLDataCompareMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB962342289B63620052E135 /* GMLPropertyMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962340289B63200052E135 /* GMLPropertyMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB962344289B65030052E135 /* GMLUIKitMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962343289B639D0052E135 /* GMLUIKitMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB962353289CAC820052E135 /* NSSet+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB962351289CAC810052E135 /* NSSet+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB962354289CAC820052E135 /* NSSet+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AB962352289CAC810052E135 /* NSSet+GMLAdd.m */; };
+		AB96237228A353C90052E135 /* GMLCalendarManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96237028A353C60052E135 /* GMLCalendarManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB96237328A353C90052E135 /* GMLCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96237128A353C60052E135 /* GMLCalendarManager.m */; };
+		AB96237628A354280052E135 /* GMLDateDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96237528A354280052E135 /* GMLDateDefines.m */; };
+		AB96237728A354F10052E135 /* GMLDateDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96237428A353EB0052E135 /* GMLDateDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB96238928A4A7E50052E135 /* UIColor+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96238728A4A7E40052E135 /* UIColor+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB96238A28A4A7E50052E135 /* UIColor+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96238828A4A7E40052E135 /* UIColor+GMLAdd.m */; };
+		AB96238F28A4AE120052E135 /* NSString+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96238D28A4AE110052E135 /* NSString+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB96239028A4AE120052E135 /* NSString+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96238E28A4AE110052E135 /* NSString+GMLAdd.m */; };
+		AB96239228A4D77F0052E135 /* GMLFoundationExtensionHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96239128A4D6D70052E135 /* GMLFoundationExtensionHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB96239428A4D8820052E135 /* GMLUIKitExtensionHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96239328A4D8270052E135 /* GMLUIKitExtensionHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB96239C28A645750052E135 /* CGAffineTransform+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96239B28A645390052E135 /* CGAffineTransform+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB96239F28A646CF0052E135 /* UIEdgeInsets+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96239E28A645E70052E135 /* UIEdgeInsets+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9FA538288507AB00A08C7C /* GML_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; };
 		AB9FA539288507AB00A08C7C /* GML_OC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB9FA56C2888005A00A08C7C /* GMLDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9FA56B2888002F00A08C7C /* GMLDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -197,6 +211,20 @@
 		AB96233F289B62C10052E135 /* GMLDataCompareMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLDataCompareMacro.h; sourceTree = "<group>"; };
 		AB962340289B63200052E135 /* GMLPropertyMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLPropertyMacro.h; sourceTree = "<group>"; };
 		AB962343289B639D0052E135 /* GMLUIKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLUIKitMacro.h; sourceTree = "<group>"; };
+		AB962351289CAC810052E135 /* NSSet+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSSet+GMLAdd.h"; sourceTree = "<group>"; };
+		AB962352289CAC810052E135 /* NSSet+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSSet+GMLAdd.m"; sourceTree = "<group>"; };
+		AB96237028A353C60052E135 /* GMLCalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLCalendarManager.h; sourceTree = "<group>"; };
+		AB96237128A353C60052E135 /* GMLCalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLCalendarManager.m; sourceTree = "<group>"; };
+		AB96237428A353EB0052E135 /* GMLDateDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLDateDefines.h; sourceTree = "<group>"; };
+		AB96237528A354280052E135 /* GMLDateDefines.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLDateDefines.m; sourceTree = "<group>"; };
+		AB96238728A4A7E40052E135 /* UIColor+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+GMLAdd.h"; sourceTree = "<group>"; };
+		AB96238828A4A7E40052E135 /* UIColor+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GMLAdd.m"; sourceTree = "<group>"; };
+		AB96238D28A4AE110052E135 /* NSString+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GMLAdd.h"; sourceTree = "<group>"; };
+		AB96238E28A4AE110052E135 /* NSString+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GMLAdd.m"; sourceTree = "<group>"; };
+		AB96239128A4D6D70052E135 /* GMLFoundationExtensionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLFoundationExtensionHeader.h; sourceTree = "<group>"; };
+		AB96239328A4D8270052E135 /* GMLUIKitExtensionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLUIKitExtensionHeader.h; sourceTree = "<group>"; };
+		AB96239B28A645390052E135 /* CGAffineTransform+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGAffineTransform+GMLAdd.h"; sourceTree = "<group>"; };
+		AB96239E28A645E70052E135 /* UIEdgeInsets+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIEdgeInsets+GMLAdd.h"; sourceTree = "<group>"; };
 		AB9FA56B2888002F00A08C7C /* GMLDispatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLDispatch.h; sourceTree = "<group>"; };
 		AB9FA56D28880D1900A08C7C /* GMLDispatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLDispatch.m; sourceTree = "<group>"; };
 		AB9FA58D288A8E5900A08C7C /* NSArray+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+GMLAdd.h"; sourceTree = "<group>"; };
@@ -380,8 +408,11 @@
 		AB46BB5A2881461800C3B30B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				AB96238C28A4ADFB0052E135 /* Strings&Text */,
+				AB96236F28A353660052E135 /* Dates&Timers */,
 				AB9FA58C288A8E4800A08C7C /* Collections */,
 				AB46BB5B2881462400C3B30B /* Processes&Threads */,
+				AB96239128A4D6D70052E135 /* GMLFoundationExtensionHeader.h */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -485,6 +516,7 @@
 			children = (
 				AB96232A289A642A0052E135 /* CGGeometry+GMLAdd.h */,
 				AB96232C289A73F60052E135 /* GMLRadianAngle.h */,
+				AB96239B28A645390052E135 /* CGAffineTransform+GMLAdd.h */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -544,11 +576,50 @@
 			path = Dispatch;
 			sourceTree = "<group>";
 		};
+		AB96236F28A353660052E135 /* Dates&Timers */ = {
+			isa = PBXGroup;
+			children = (
+				AB96237028A353C60052E135 /* GMLCalendarManager.h */,
+				AB96237128A353C60052E135 /* GMLCalendarManager.m */,
+				AB96237428A353EB0052E135 /* GMLDateDefines.h */,
+				AB96237528A354280052E135 /* GMLDateDefines.m */,
+			);
+			path = "Dates&Timers";
+			sourceTree = "<group>";
+		};
+		AB96238628A4A7D00052E135 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				AB96238728A4A7E40052E135 /* UIColor+GMLAdd.h */,
+				AB96238828A4A7E40052E135 /* UIColor+GMLAdd.m */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		AB96238C28A4ADFB0052E135 /* Strings&Text */ = {
+			isa = PBXGroup;
+			children = (
+				AB96238D28A4AE110052E135 /* NSString+GMLAdd.h */,
+				AB96238E28A4AE110052E135 /* NSString+GMLAdd.m */,
+			);
+			path = "Strings&Text";
+			sourceTree = "<group>";
+		};
+		AB96239D28A645B50052E135 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				AB96239E28A645E70052E135 /* UIEdgeInsets+GMLAdd.h */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
 		AB9FA58C288A8E4800A08C7C /* Collections */ = {
 			isa = PBXGroup;
 			children = (
 				AB9FA58D288A8E5900A08C7C /* NSArray+GMLAdd.h */,
 				AB9FA58E288A8E5900A08C7C /* NSArray+GMLAdd.m */,
+				AB962351289CAC810052E135 /* NSSet+GMLAdd.h */,
+				AB962352289CAC810052E135 /* NSSet+GMLAdd.m */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -630,7 +701,10 @@
 		ABDB9DA8283B5A0F007FDD41 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				AB96239D28A645B50052E135 /* Geometry */,
+				AB96238628A4A7D00052E135 /* Drawing */,
 				ABDB9DA9283B5A19007FDD41 /* Views&Controllers */,
+				AB96239328A4D8270052E135 /* GMLUIKitExtensionHeader.h */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -778,6 +852,7 @@
 				AB96232D289A74930052E135 /* GMLRadianAngle.h in Headers */,
 				ABDB9DE0283C7DE3007FDD41 /* GMLNavigationBarAppearanceManager.h in Headers */,
 				AB256D342844E28800B3A441 /* GMLObjectRuntimeHelp.h in Headers */,
+				AB96239C28A645750052E135 /* CGAffineTransform+GMLAdd.h in Headers */,
 				ABDB9DEF283CDC54007FDD41 /* GMLViewControllerViewStateDefine.h in Headers */,
 				AB96231D289A606D0052E135 /* GMLArrowBubbleControl.h in Headers */,
 				ABDB9DD9283C7C5B007FDD41 /* GMLNavigationBarAppearanceItem.h in Headers */,
@@ -787,12 +862,16 @@
 				ABDB9DED283CDC23007FDD41 /* GMLConfigureNavigationControllerProtocol.h in Headers */,
 				ABDB9D8C283B3605007FDD41 /* Runtime+GMLAdd.h in Headers */,
 				AB256D2928449F0400B3A441 /* GMLProtocolFlagManager.h in Headers */,
+				AB96239428A4D8820052E135 /* GMLUIKitExtensionHeader.h in Headers */,
 				AB46BB5E2881464400C3B30B /* GMLTimerAdapter.h in Headers */,
+				AB96239F28A646CF0052E135 /* UIEdgeInsets+GMLAdd.h in Headers */,
 				AB96232B289A64A40052E135 /* CGGeometry+GMLAdd.h in Headers */,
 				AB962321289A606D0052E135 /* GMLMultiAngleDefineHeader.h in Headers */,
 				ABDB9DF0283CDE43007FDD41 /* GMLNavigationBarAppearanceProtocol.h in Headers */,
 				ABA9BFAC283CF50500EE3F54 /* GML_OC.h in Headers */,
+				AB962353289CAC820052E135 /* NSSet+GMLAdd.h in Headers */,
 				AB962339289B57B20052E135 /* GMLMultiAngleHeader.h in Headers */,
+				AB96237228A353C90052E135 /* GMLCalendarManager.h in Headers */,
 				AB9622EA289A598E0052E135 /* CGButton.h in Headers */,
 				AB962322289A606D0052E135 /* GMLMultiAngleProtocol.h in Headers */,
 				AB962341289B635B0052E135 /* GMLDataCompareMacro.h in Headers */,
@@ -807,13 +886,17 @@
 				ABDB9D95283B5396007FDD41 /* GMLTest.h in Headers */,
 				AB9622F1289A5C0E0052E135 /* UIView+GMLAreaAdd.h in Headers */,
 				AB962342289B63620052E135 /* GMLPropertyMacro.h in Headers */,
+				AB96238F28A4AE120052E135 /* NSString+GMLAdd.h in Headers */,
+				AB96238928A4A7E50052E135 /* UIColor+GMLAdd.h in Headers */,
 				AB9FA58F288A8E5900A08C7C /* NSArray+GMLAdd.h in Headers */,
+				AB96237728A354F10052E135 /* GMLDateDefines.h in Headers */,
 				ABDB9DAD283B5A55007FDD41 /* GMLNavigationController.h in Headers */,
 				AB962332289A759B0052E135 /* CALayer+GMLAdd.h in Headers */,
 				ABA07A60288E3E320053373B /* GMLMacrosHeader.h in Headers */,
 				ABDB9DEE283CDC48007FDD41 /* GMLConfigureNavigationControllerDefines.h in Headers */,
 				AB962327289A60DE0052E135 /* GMLLineGradientTypeHeader.h in Headers */,
 				AB9622EC289A5A8E0052E135 /* CGButtonDefinesHeader.h in Headers */,
+				AB96239228A4D77F0052E135 /* GMLFoundationExtensionHeader.h in Headers */,
 				AB13553E28780D52003AAEE6 /* UIAlertController+GMLAdd.h in Headers */,
 				ABDB9DB7283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.h in Headers */,
 				ABDB9DD4283C7BE0007FDD41 /* GMLNavigationBarAppearance.h in Headers */,
@@ -1062,7 +1145,9 @@
 				ABDB9DAE283B5A55007FDD41 /* GMLNavigationController.m in Sources */,
 				AB9622E9289A598E0052E135 /* CGButton.m in Sources */,
 				AB96231F289A606D0052E135 /* GMLMultiAngleLayer.m in Sources */,
+				AB962354289CAC820052E135 /* NSSet+GMLAdd.m in Sources */,
 				AB256D352844E28800B3A441 /* GMLObjectRuntimeHelp.m in Sources */,
+				AB96237328A353C90052E135 /* GMLCalendarManager.m in Sources */,
 				ABDB9DDA283C7C5B007FDD41 /* GMLNavigationBarAppearanceItem.m in Sources */,
 				ABDB9DB8283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.m in Sources */,
 				ABDB9D74283B35BA007FDD41 /* GML_OC.docc in Sources */,
@@ -1073,8 +1158,11 @@
 				ABDB9DC2283B64DD007FDD41 /* GMLViewControllerViewStateItem.m in Sources */,
 				AB9622F2289A5C0E0052E135 /* UIView+GMLAreaAdd.m in Sources */,
 				AB962323289A606D0052E135 /* GMLMultiAngleView.m in Sources */,
+				AB96238A28A4A7E50052E135 /* UIColor+GMLAdd.m in Sources */,
 				AB13553F28780D52003AAEE6 /* UIAlertController+GMLAdd.m in Sources */,
+				AB96237628A354280052E135 /* GMLDateDefines.m in Sources */,
 				AB46BB5F2881464400C3B30B /* GMLTimerAdapter.m in Sources */,
+				AB96239028A4AE120052E135 /* NSString+GMLAdd.m in Sources */,
 				ABDB9D8D283B3605007FDD41 /* Runtime+GMLAdd.m in Sources */,
 				AB962333289A759B0052E135 /* CALayer+GMLAdd.m in Sources */,
 				ABDB9D96283B5396007FDD41 /* GMLTest.m in Sources */,

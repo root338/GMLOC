@@ -10,5 +10,6 @@
 
 #import <GML_OC/CGGeometry+GMLAdd.h>
 #import <GML_OC/GMLRadianAngle.h>
+#import <GML_OC/CGAffineTransform+GMLAdd.h>
 
 #endif /* GMLCoreGraphicsHeader_h */

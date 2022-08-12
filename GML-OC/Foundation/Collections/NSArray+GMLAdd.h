@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param index 指定的索引，可以循环获取，-1 获取最后一个元素
 - (ObjectType)objectAtCycleIndex:(NSInteger)index;
 
+
 @end
 
 NS_ASSUME_NONNULL_END

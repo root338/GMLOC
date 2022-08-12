@@ -73,8 +73,42 @@ CG_INLINE CGSize GMLSizeAddSize(CGSize s1, CGSize s2) {
     return CGSizeMake(s1.width + s2.width, s1.height + s2.height);
 }
 
+/** 获取 s1 的中心点 */
+CG_INLINE CGPoint GMLSizeGetMidPoint(CGSize s1) {
+    return CGPointMake(s1.width / 2.0, s1.height / 2.0);
+}
+
+/** 获取 s1 在 s2 居中时的起始坐标 */
+CG_INLINE CGPoint GMLSizeGetMidPointOfSize(CGSize s1, CGSize s2) {
+    return CGPointMake((s2.width - s1.width) / 2.0, (s2.height - s1.height) / 2.0);
+}
+
+/** 计算 { { midX - size.width / 2, midY - size.height / 2 }, { size } */
+CG_INLINE CGRect GMLSizeCenterOfRect(CGSize size, CGRect rect) {
+    return CGRectMake(CGRectGetMidX(rect) - size.width / 2,
+                      CGRectGetMidY(rect) - size.height / 2,
+                      size.width,
+                      size.height
+                      );
+}
+
+
+/** size 在可用区域(rect)内，垂直居中 */
+CG_INLINE CGRect GMLSizeOfRectVerticalCenter(CGSize size, CGRect rect) {
+    return CGRectMake(CGRectGetMinX(rect), CGRectGetMinY(rect) + (CGRectGetHeight(rect) - size.height) / 2, size.width, size.height);
+}
+/** size 在可用区域(rect)内，水平居中 */
+CG_INLINE CGRect GMLSizeOfRectHorizontalCenter(CGSize size, CGRect rect) {
+    return CGRectMake(CGRectGetMinX(rect) + (CGRectGetWidth(rect) - size.width) / 2, CGRectGetMinY(rect), size.width, size.height);
+}
+
 CG_INLINE BOOL GMLPointIsNAN(CGPoint p1) {
     return isnan(p1.x) || isnan(p1.y);
+}
+
+/** 两个坐标的中点 */
+CG_INLINE CGPoint GMLMidPoint(CGPoint p1, CGPoint p2) {
+    return CGPointMake((p1.x + p2.x) / 2.0, (p1.y + p2.y) / 2.0);
 }
 
 /** 计算 { p1.x + x, p1.y + y } */
@@ -87,19 +121,6 @@ CG_INLINE CGPoint GMLPointAddPoint(CGPoint p1, CGPoint p2) {
     return CGPointMake(p1.x + p2.x, p1.y + p2.y);
 }
 
-/** 获取 s1 的中心点 */
-CG_INLINE CGPoint GMLSizeGetMidPoint(CGSize s1) {
-    return CGPointMake(s1.width / 2.0, s1.height / 2.0);
-}
-
-/** 获取 s1 在 s2 居中时的起始坐标 */
-CG_INLINE CGPoint GMLSizeGetMidPointOfSize(CGSize s1, CGSize s2) {
-    return CGPointMake((s2.width - s1.width) / 2.0, (s2.height - s1.height) / 2.0);
-}
-
-CG_INLINE CGPoint GMLPointsGetMidPoint(CGPoint p1, CGPoint p2) {
-    return CGPointMake((p1.x + p2.x) / 2.0, (p1.y + p2.y) / 2.0);
-}
 /// {MIN(p1.x, p2.x), MIN(p1.y, p2.y)}
 CG_INLINE CGPoint GMLMinPoint(CGPoint p1, CGPoint p2) {
     return CGPointMake(MIN(p1.x, p2.x), MIN(p1.y, p2.y));
@@ -113,13 +134,39 @@ CG_INLINE CGRect GMLRect(CGPoint p, CGSize s) {
     return CGRectMake(p.x, p.y, s.width, s.height);
 }
 
-/** 计算 { { midX - size.width / 2, midY - size.height / 2 }, { size } */
-CG_INLINE CGRect GMLSizeCenterOfRect(CGSize size, CGRect rect) {
-    return CGRectMake(CGRectGetMidX(rect) - size.width / 2,
-                      CGRectGetMidY(rect) - size.height / 2,
-                      size.width,
-                      size.height
-                      );
+/** 计算 { { 0, 0}, { width, height } } */
+CG_INLINE CGRect GMLRectBounds(CGRect rect) {
+    return CGRectMake(0, 0, CGRectGetWidth(rect), CGRectGetHeight(rect));
+}
+
+/** 忽略顶部 计算 { { x + left, offsetY }, { width - (left + right), height - (offsetY + bottom) } } */
+CG_INLINE CGRect GMLRectLessInsetExcludeTop(CGRect rect, UIEdgeInsets insets, CGFloat offsetY) {
+    return CGRectMake(CGRectGetMinX(rect) + insets.left, CGRectGetMinY(rect) + offsetY, GMLFloatAddHorizontalInsets(rect.size.width, insets), rect.size.height - (offsetY + insets.bottom));
+}
+
+/** 忽略底部 计算 { { x + left, y + top }, { width - (left + right), height} } */
+CG_INLINE CGRect GMLRectLessInsetExcludeBottom(CGRect rect, UIEdgeInsets insets, CGFloat height) {
+    return CGRectMake(CGRectGetMinX(rect) + insets.left, CGRectGetMinY(rect) + insets.top, GMLFloatAddHorizontalInsets(rect.size.width, insets), height);
+}
+
+/** 忽略垂直 计算 { { x + left, y + offsetY }, { width - (left + right), height } } */
+CG_INLINE CGRect GMLRectLessInsetExcludeVertical(CGRect rect, UIEdgeInsets insets, CGFloat offsetY, CGFloat height) {
+    return CGRectMake(CGRectGetMinX(rect) + insets.left, CGRectGetMinY(rect) + offsetY, GMLFloatAddHorizontalInsets(rect.size.width, insets), height);
+}
+
+/** 忽略右边 计算 { {x + left, y + top }, { width , height - (top + bottom) } } */
+CG_INLINE CGRect GMLRectLessInsetExcludeRight(CGRect rect, UIEdgeInsets insets, CGFloat width) {
+    return CGRectMake(CGRectGetMinX(rect) + insets.left, CGRectGetMinY(rect) + insets.top, width, GMLFloatAddVerticalInsets(rect.size.height, insets));
+}
+
+/** 忽略左边 计算 { { x + offsetX, y + top }, { width - (offsetX + right), height - (top + bottom) } }  */
+CG_INLINE CGRect GMLRectLessInsetExcludeLeft(CGRect rect, UIEdgeInsets insets, CGFloat offsetX) {
+    return CGRectMake(CGRectGetMinX(rect) + offsetX, CGRectGetMinY(rect) + insets.top, CGRectGetWidth(rect) - (offsetX + insets.right), GMLFloatAddVerticalInsets(rect.size.height, insets));
+}
+
+/** 忽略水平 计算 { { x + offsetX, y + top }, { width , height - (top + bottom) } */
+CG_INLINE CGRect GMLRectLessInsetExcludeHorizontal(CGRect rect, UIEdgeInsets insets, CGFloat offsetX, CGFloat width) {
+    return CGRectMake(CGRectGetMinX(rect) + offsetX, CGRectGetMinY(rect) + insets.top, width, GMLFloatAddVerticalInsets(rect.size.height, insets));
 }
 
 #if __has_include(<UIKit/UIView.h>)

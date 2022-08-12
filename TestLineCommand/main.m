@@ -48,6 +48,15 @@ int main(int argc, const char * argv[]) {
         NSLog(@"A respondsToSelector:@selector(testInstance)");
         NSLog(@"%i", [A respondsToSelector:@selector(testInstance)]);
         
+        for (NSInteger index = 48; index < 58; index++) {
+            NSString *str = [NSString stringWithUTF8String:(char *)&index];
+            uint32_t result1 = 0;
+            uint32_t result2 = 0;
+            sscanf(str.UTF8String, "%X", &result1);
+            sscanf([[str stringByAppendingString:str] UTF8String], "%X", &result2);
+            NSLog(@"%@: 单: %f, 双: %f", str, result1 / 15.0, result2 / 255.0);
+        }
+        
     }
     return 0;
 }
