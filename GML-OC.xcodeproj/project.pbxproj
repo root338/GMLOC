@@ -21,11 +21,6 @@
 		AB22DFC02884FBF900181E48 /* GMLTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB22DFBF2884FBF900181E48 /* GMLTestUITests.m */; };
 		AB22DFC22884FBF900181E48 /* GMLTestUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB22DFC12884FBF900181E48 /* GMLTestUITestsLaunchTests.m */; };
 		AB22DFD3288502AB00181E48 /* GMLTimerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AB46BB5D2881464400C3B30B /* GMLTimerAdapter.m */; };
-		AB256D2928449F0400B3A441 /* GMLProtocolFlagManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AB256D2728449F0400B3A441 /* GMLProtocolFlagManager.h */; };
-		AB256D2F2844DF2500B3A441 /* GMLProtocolFlagModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AB256D2D2844DF2500B3A441 /* GMLProtocolFlagModel.h */; };
-		AB256D302844DF2500B3A441 /* GMLProtocolFlagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB256D2E2844DF2500B3A441 /* GMLProtocolFlagModel.m */; };
-		AB256D342844E28800B3A441 /* GMLObjectRuntimeHelp.h in Headers */ = {isa = PBXBuildFile; fileRef = AB256D322844E28800B3A441 /* GMLObjectRuntimeHelp.h */; };
-		AB256D352844E28800B3A441 /* GMLObjectRuntimeHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = AB256D332844E28800B3A441 /* GMLObjectRuntimeHelp.m */; };
 		AB46BB5E2881464400C3B30B /* GMLTimerAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = AB46BB5C2881464400C3B30B /* GMLTimerAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB46BB5F2881464400C3B30B /* GMLTimerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = AB46BB5D2881464400C3B30B /* GMLTimerAdapter.m */; };
 		AB46BB6728814C1C00C3B30B /* GMLTimeConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = AB46BB6628814C1C00C3B30B /* GMLTimeConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,6 +62,8 @@
 		AB96239428A4D8820052E135 /* GMLUIKitExtensionHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96239328A4D8270052E135 /* GMLUIKitExtensionHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB96239C28A645750052E135 /* CGAffineTransform+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96239B28A645390052E135 /* CGAffineTransform+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB96239F28A646CF0052E135 /* UIEdgeInsets+GMLAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96239E28A645E70052E135 /* UIEdgeInsets+GMLAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB9623AE28AA39250052E135 /* GMLCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96237128A353C60052E135 /* GMLCalendarManager.m */; };
+		AB9623AF28AA392A0052E135 /* GMLDateDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96237528A354280052E135 /* GMLDateDefines.m */; };
 		AB9FA538288507AB00A08C7C /* GML_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; };
 		AB9FA539288507AB00A08C7C /* GML_OC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB9FA56C2888005A00A08C7C /* GMLDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9FA56B2888002F00A08C7C /* GMLDispatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -75,6 +72,9 @@
 		AB9FA590288A8E5900A08C7C /* NSArray+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9FA58E288A8E5900A08C7C /* NSArray+GMLAdd.m */; };
 		ABA07A60288E3E320053373B /* GMLMacrosHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DF2283CE3A3007FDD41 /* GMLMacrosHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABA9BFAC283CF50500EE3F54 /* GML_OC.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9D72283B35BA007FDD41 /* GML_OC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABB5AF3E28B5C7E70011AAC7 /* GMLDataCompare.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB5AF3C28B5C7E70011AAC7 /* GMLDataCompare.h */; };
+		ABB5AF3F28B5C7E70011AAC7 /* GMLDataCompare.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5AF3D28B5C7E70011AAC7 /* GMLDataCompare.m */; };
+		ABB5AF6428B773F80011AAC7 /* Runtime+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D8B283B3605007FDD41 /* Runtime+GMLAdd.m */; };
 		ABDB9D74283B35BA007FDD41 /* GML_OC.docc in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D73283B35BA007FDD41 /* GML_OC.docc */; };
 		ABDB9D7A283B35BA007FDD41 /* GML_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; };
 		ABDB9D7F283B35BA007FDD41 /* GML_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D7E283B35BA007FDD41 /* GML_OCTests.m */; };
@@ -101,6 +101,8 @@
 		ABDB9DEE283CDC48007FDD41 /* GMLConfigureNavigationControllerDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DEC283CB818007FDD41 /* GMLConfigureNavigationControllerDefines.h */; };
 		ABDB9DEF283CDC54007FDD41 /* GMLViewControllerViewStateDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DC3283B659F007FDD41 /* GMLViewControllerViewStateDefine.h */; };
 		ABDB9DF0283CDE43007FDD41 /* GMLNavigationBarAppearanceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDB9DE6283CAFD9007FDD41 /* GMLNavigationBarAppearanceProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABDE332928AB390200E7E7CB /* GMLOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDE332728AB390200E7E7CB /* GMLOperation.h */; };
+		ABDE332A28AB390200E7E7CB /* GMLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDE332828AB390200E7E7CB /* GMLOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,12 +180,6 @@
 		AB22DFBB2884FBF900181E48 /* GMLTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GMLTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB22DFBF2884FBF900181E48 /* GMLTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLTestUITests.m; sourceTree = "<group>"; };
 		AB22DFC12884FBF900181E48 /* GMLTestUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLTestUITestsLaunchTests.m; sourceTree = "<group>"; };
-		AB256D2728449F0400B3A441 /* GMLProtocolFlagManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLProtocolFlagManager.h; sourceTree = "<group>"; };
-		AB256D2828449F0400B3A441 /* GMLProtocolFlagManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLProtocolFlagManager.m; sourceTree = "<group>"; };
-		AB256D2D2844DF2500B3A441 /* GMLProtocolFlagModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLProtocolFlagModel.h; sourceTree = "<group>"; };
-		AB256D2E2844DF2500B3A441 /* GMLProtocolFlagModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLProtocolFlagModel.m; sourceTree = "<group>"; };
-		AB256D322844E28800B3A441 /* GMLObjectRuntimeHelp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLObjectRuntimeHelp.h; sourceTree = "<group>"; };
-		AB256D332844E28800B3A441 /* GMLObjectRuntimeHelp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLObjectRuntimeHelp.m; sourceTree = "<group>"; };
 		AB46BB5C2881464400C3B30B /* GMLTimerAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLTimerAdapter.h; sourceTree = "<group>"; };
 		AB46BB5D2881464400C3B30B /* GMLTimerAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLTimerAdapter.m; sourceTree = "<group>"; };
 		AB46BB6628814C1C00C3B30B /* GMLTimeConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLTimeConfiguration.h; sourceTree = "<group>"; };
@@ -229,6 +225,8 @@
 		AB9FA56D28880D1900A08C7C /* GMLDispatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLDispatch.m; sourceTree = "<group>"; };
 		AB9FA58D288A8E5900A08C7C /* NSArray+GMLAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+GMLAdd.h"; sourceTree = "<group>"; };
 		AB9FA58E288A8E5900A08C7C /* NSArray+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+GMLAdd.m"; sourceTree = "<group>"; };
+		ABB5AF3C28B5C7E70011AAC7 /* GMLDataCompare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLDataCompare.h; sourceTree = "<group>"; };
+		ABB5AF3D28B5C7E70011AAC7 /* GMLDataCompare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLDataCompare.m; sourceTree = "<group>"; };
 		ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GML_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDB9D72283B35BA007FDD41 /* GML_OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GML_OC.h; sourceTree = "<group>"; };
 		ABDB9D73283B35BA007FDD41 /* GML_OC.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GML_OC.docc; sourceTree = "<group>"; };
@@ -260,6 +258,9 @@
 		ABDB9DE9283CB6CB007FDD41 /* GMLConfigureNavigationControllerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLConfigureNavigationControllerManager.m; sourceTree = "<group>"; };
 		ABDB9DEC283CB818007FDD41 /* GMLConfigureNavigationControllerDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLConfigureNavigationControllerDefines.h; sourceTree = "<group>"; };
 		ABDB9DF2283CE3A3007FDD41 /* GMLMacrosHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLMacrosHeader.h; sourceTree = "<group>"; };
+		ABDE332728AB390200E7E7CB /* GMLOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLOperation.h; sourceTree = "<group>"; };
+		ABDE332828AB390200E7E7CB /* GMLOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLOperation.m; sourceTree = "<group>"; };
+		ABDE332C28AB395400E7E7CB /* GMLOperation+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GMLOperation+Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,25 +387,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AB256D2628449EE700B3A441 /* ProtocolFlag */ = {
-			isa = PBXGroup;
-			children = (
-				AB256D2C2844DECB00B3A441 /* Model */,
-				AB256D2728449F0400B3A441 /* GMLProtocolFlagManager.h */,
-				AB256D2828449F0400B3A441 /* GMLProtocolFlagManager.m */,
-			);
-			path = ProtocolFlag;
-			sourceTree = "<group>";
-		};
-		AB256D2C2844DECB00B3A441 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				AB256D2D2844DF2500B3A441 /* GMLProtocolFlagModel.h */,
-				AB256D2E2844DF2500B3A441 /* GMLProtocolFlagModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		AB46BB5A2881461800C3B30B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +402,7 @@
 		AB46BB5B2881462400C3B30B /* Processes&Threads */ = {
 			isa = PBXGroup;
 			children = (
+				ABDE332628AB38DF00E7E7CB /* Processes */,
 				AB46BB6028814BAF00C3B30B /* Timer */,
 			);
 			path = "Processes&Threads";
@@ -624,6 +607,41 @@
 			path = Collections;
 			sourceTree = "<group>";
 		};
+		ABB5AF3828B5C1BE0011AAC7 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				ABB5AF3A28B5C7A00011AAC7 /* Foundation */,
+				ABB5AF3928B5C1C90011AAC7 /* UI */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		ABB5AF3928B5C1C90011AAC7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AB9622F5289A5FFF0052E135 /* MultiAngle */,
+				ABDB9DAA283B5A3F007FDD41 /* GMLNavigationController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		ABB5AF3A28B5C7A00011AAC7 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				ABB5AF3B28B5C7B70011AAC7 /* DataCompare */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		ABB5AF3B28B5C7B70011AAC7 /* DataCompare */ = {
+			isa = PBXGroup;
+			children = (
+				ABB5AF3C28B5C7E70011AAC7 /* GMLDataCompare.h */,
+				ABB5AF3D28B5C7E70011AAC7 /* GMLDataCompare.m */,
+			);
+			path = DataCompare;
+			sourceTree = "<group>";
+		};
 		ABDB9D65283B35BA007FDD41 = {
 			isa = PBXGroup;
 			children = (
@@ -656,6 +674,7 @@
 			isa = PBXGroup;
 			children = (
 				ABDB9D72283B35BA007FDD41 /* GML_OC.h */,
+				ABB5AF3828B5C1BE0011AAC7 /* Module */,
 				AB962348289B69310052E135 /* Dispatch */,
 				AB96232E289A75590052E135 /* CoreAnimation */,
 				AB962328289A63DF0052E135 /* CoreGraphics */,
@@ -682,9 +701,6 @@
 			children = (
 				ABDB9D8A283B3605007FDD41 /* Runtime+GMLAdd.h */,
 				ABDB9D8B283B3605007FDD41 /* Runtime+GMLAdd.m */,
-				AB256D322844E28800B3A441 /* GMLObjectRuntimeHelp.h */,
-				AB256D332844E28800B3A441 /* GMLObjectRuntimeHelp.m */,
-				AB256D2628449EE700B3A441 /* ProtocolFlag */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -713,11 +729,9 @@
 			isa = PBXGroup;
 			children = (
 				AB962337289A858A0052E135 /* Base */,
-				AB9622F5289A5FFF0052E135 /* MultiAngle */,
 				AB9622E6289A59760052E135 /* Button */,
 				AB13553B28780D3D003AAEE6 /* GMLAlertController */,
 				ABDB9DBE283B6437007FDD41 /* Private */,
-				ABDB9DAA283B5A3F007FDD41 /* GMLNavigationController */,
 			);
 			path = "Views&Controllers";
 			sourceTree = "<group>";
@@ -842,6 +856,24 @@
 			path = Defines;
 			sourceTree = "<group>";
 		};
+		ABDE332628AB38DF00E7E7CB /* Processes */ = {
+			isa = PBXGroup;
+			children = (
+				ABDE332B28AB392600E7E7CB /* Internal */,
+				ABDE332728AB390200E7E7CB /* GMLOperation.h */,
+				ABDE332828AB390200E7E7CB /* GMLOperation.m */,
+			);
+			path = Processes;
+			sourceTree = "<group>";
+		};
+		ABDE332B28AB392600E7E7CB /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				ABDE332C28AB395400E7E7CB /* GMLOperation+Private.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -849,9 +881,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB5AF3E28B5C7E70011AAC7 /* GMLDataCompare.h in Headers */,
 				AB96232D289A74930052E135 /* GMLRadianAngle.h in Headers */,
 				ABDB9DE0283C7DE3007FDD41 /* GMLNavigationBarAppearanceManager.h in Headers */,
-				AB256D342844E28800B3A441 /* GMLObjectRuntimeHelp.h in Headers */,
 				AB96239C28A645750052E135 /* CGAffineTransform+GMLAdd.h in Headers */,
 				ABDB9DEF283CDC54007FDD41 /* GMLViewControllerViewStateDefine.h in Headers */,
 				AB96231D289A606D0052E135 /* GMLArrowBubbleControl.h in Headers */,
@@ -861,7 +893,6 @@
 				AB962320289A606D0052E135 /* GMLMultiAngleLayer.h in Headers */,
 				ABDB9DED283CDC23007FDD41 /* GMLConfigureNavigationControllerProtocol.h in Headers */,
 				ABDB9D8C283B3605007FDD41 /* Runtime+GMLAdd.h in Headers */,
-				AB256D2928449F0400B3A441 /* GMLProtocolFlagManager.h in Headers */,
 				AB96239428A4D8820052E135 /* GMLUIKitExtensionHeader.h in Headers */,
 				AB46BB5E2881464400C3B30B /* GMLTimerAdapter.h in Headers */,
 				AB96239F28A646CF0052E135 /* UIEdgeInsets+GMLAdd.h in Headers */,
@@ -870,6 +901,7 @@
 				ABDB9DF0283CDE43007FDD41 /* GMLNavigationBarAppearanceProtocol.h in Headers */,
 				ABA9BFAC283CF50500EE3F54 /* GML_OC.h in Headers */,
 				AB962353289CAC820052E135 /* NSSet+GMLAdd.h in Headers */,
+				ABDE332928AB390200E7E7CB /* GMLOperation.h in Headers */,
 				AB962339289B57B20052E135 /* GMLMultiAngleHeader.h in Headers */,
 				AB96237228A353C90052E135 /* GMLCalendarManager.h in Headers */,
 				AB9622EA289A598E0052E135 /* CGButton.h in Headers */,
@@ -880,7 +912,6 @@
 				AB9FA56C2888005A00A08C7C /* GMLDispatch.h in Headers */,
 				AB96233D289B59160052E135 /* GMLCoreGraphicsHeader.h in Headers */,
 				AB962344289B65030052E135 /* GMLUIKitMacro.h in Headers */,
-				AB256D2F2844DF2500B3A441 /* GMLProtocolFlagModel.h in Headers */,
 				ABDB9DC1283B64DD007FDD41 /* GMLViewControllerViewStateItem.h in Headers */,
 				AB962324289A606D0052E135 /* GMLMultiAngleView.h in Headers */,
 				ABDB9D95283B5396007FDD41 /* GMLTest.h in Headers */,
@@ -1146,13 +1177,14 @@
 				AB9622E9289A598E0052E135 /* CGButton.m in Sources */,
 				AB96231F289A606D0052E135 /* GMLMultiAngleLayer.m in Sources */,
 				AB962354289CAC820052E135 /* NSSet+GMLAdd.m in Sources */,
-				AB256D352844E28800B3A441 /* GMLObjectRuntimeHelp.m in Sources */,
 				AB96237328A353C90052E135 /* GMLCalendarManager.m in Sources */,
+				ABDE332A28AB390200E7E7CB /* GMLOperation.m in Sources */,
 				ABDB9DDA283C7C5B007FDD41 /* GMLNavigationBarAppearanceItem.m in Sources */,
 				ABDB9DB8283B5D9E007FDD41 /* UIViewController+GMLViewStateAdd.m in Sources */,
 				ABDB9D74283B35BA007FDD41 /* GML_OC.docc in Sources */,
 				ABDB9DD5283C7BE0007FDD41 /* GMLNavigationBarAppearance.m in Sources */,
 				AB96231E289A606D0052E135 /* GMLArrowBubbleControl.m in Sources */,
+				ABB5AF3F28B5C7E70011AAC7 /* GMLDataCompare.m in Sources */,
 				ABDB9DEB283CB6CB007FDD41 /* GMLConfigureNavigationControllerManager.m in Sources */,
 				ABDB9DE1283C7DE3007FDD41 /* GMLNavigationBarAppearanceManager.m in Sources */,
 				ABDB9DC2283B64DD007FDD41 /* GMLViewControllerViewStateItem.m in Sources */,
@@ -1167,7 +1199,6 @@
 				AB962333289A759B0052E135 /* CALayer+GMLAdd.m in Sources */,
 				ABDB9D96283B5396007FDD41 /* GMLTest.m in Sources */,
 				AB9FA590288A8E5900A08C7C /* NSArray+GMLAdd.m in Sources */,
-				AB256D302844DF2500B3A441 /* GMLProtocolFlagModel.m in Sources */,
 				AB9FA56E28880D1900A08C7C /* GMLDispatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1185,7 +1216,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB22DFD3288502AB00181E48 /* GMLTimerAdapter.m in Sources */,
+				AB9623AE28AA39250052E135 /* GMLCalendarManager.m in Sources */,
+				ABB5AF6428B773F80011AAC7 /* Runtime+GMLAdd.m in Sources */,
 				ABDB9DCE283C6E0A007FDD41 /* main.m in Sources */,
+				AB9623AF28AA392A0052E135 /* GMLDateDefines.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

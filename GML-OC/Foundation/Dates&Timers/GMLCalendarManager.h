@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GMLDateDefines.h"
+#import <GML_OC/GMLDateDefines.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (class, readonly, strong) GMLCalendarManager *defaultManager;
 
-/// 创建的日历类型，默认GMLCalendarGregorian
-@property (nonatomic, assign) GMLCalendar calendarType;
+/// 创建的日历类型，默认 NSCalendarIdentifierGregorian
+@property (nonatomic, copy) NSCalendarIdentifier calendarIdentifier;
 @property (nonatomic, strong, readonly) NSCalendar *calendar;
 
 /**
@@ -48,8 +48,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSDateComponents *)components:(NSCalendarUnit)unit date:(NSDate *)date;
 
 #pragma mark - 格式化时间
-- (nullable NSString *)date:(NSDate *)date formatterStyle:(CGFormatterStyle)formatterStyle;
-- (nullable NSDate *)formatterString:(NSString *)formatterString style:(CGFormatterStyle)style;
+- (nullable NSString *)date:(NSDate *)date format:(NSString *)format;
+- (nullable NSDate *)string:(NSString *)string format:(NSString *)format;
 
 @end
 

@@ -13,6 +13,6 @@ NSCalendarUnit const GMLCalendarUnitYear = NSCalendarUnitEra | NSCalendarUnitYea
 
 NSCalendarUnit const GMLCalendarUnitTime = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
 
-CGFormatterStyle const GMLFormatStyleYear = @"GMLFormatterStyleYear";
-CGFormatterStyle const GMLFormatStyleTime = @"GMLFormatterStyleTime";
-CGFormatterStyle const GMLFormatStyleAll = @"GMLFormatterStyleAll";
+NSString * const GMLYearFormat = @"yyyy-MM-dd";
+NSString * const GMLTimeFormat = @"HH:mm:ss";
+NSString * const GMLFullDateFormat = @"yyyy-MM-dd HH:mm:ss";

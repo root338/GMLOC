@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 当导入 UIKit/UIScreen.h 时，contentsScale 自动设置为 UIScreen.mainScreen.scale
 + (instancetype)createLayerWithBackgroundColor:(nullable CGColorRef)backgroundColor;
 
++ (instancetype)createLayerWithConfigure:(void(NS_NOESCAPE^ )(id configure))configure;
+
 @end
 
 @interface CAGradientLayer (GMLAdd)

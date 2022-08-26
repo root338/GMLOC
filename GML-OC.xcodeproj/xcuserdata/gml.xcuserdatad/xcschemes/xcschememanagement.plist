@@ -7,17 +7,17 @@
 		<key>GML-OC.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>45</integer>
+			<integer>102</integer>
 		</dict>
 		<key>GMLTest.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>39</integer>
+			<integer>105</integer>
 		</dict>
 		<key>TestLineCommand.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>44</integer>
+			<integer>104</integer>
 		</dict>
 		<key>TestPlayground (Playground).xcscheme</key>
 		<dict>

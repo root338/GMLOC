@@ -10,8 +10,8 @@
 #import <UIKit/UIGeometry.h>
 #import <CoreGraphics/CGGeometry.h>
 
-#import "GMLMultiAngleDefineHeader.h"
-#import "GMLLineGradientTypeHeader.h"
+#import <GML_OC/GMLMultiAngleDefineHeader.h>
+#import <GML_OC/GMLLineGradientTypeHeader.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @class GMLArrowBubbleControl, UIView, UIColor;

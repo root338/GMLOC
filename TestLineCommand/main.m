@@ -6,57 +6,47 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GMLTimerAdapter.h"
+#import "GMLCalendarManager.h"
+#import "Runtime+GMLAdd.h"
 
-@interface A: NSObject
-+ (void)testClass;
-- (void)testInstance;
+@interface TestA : NSString
+@property (nonatomic, assign) NSInteger age;
+@property (nonatomic, strong) NSString *name;
 @end
-@implementation A
-+  (void)testClass {
-    
-}
-- (BOOL)respondsToSelector:(SEL)aSelector {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-    return [super respondsToSelector:aSelector];
-}
-+ (BOOL)resolveClassMethod:(SEL)sel {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-    return [super resolveClassMethod:sel];
-}
-+ (BOOL)resolveInstanceMethod:(SEL)sel {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-    return [super resolveInstanceMethod:sel];
-}
-
-+ (BOOL)instancesRespondToSelector:(SEL)aSelector {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-    return [super instancesRespondToSelector:aSelector];
-}
-
-- (void)testInstance {
-    
-}
-
+@implementation TestA
 @end
+
+void testRuntime() {
+    NSLog(@"--------------------- %@", NSStringFromClass([TestA class]));
+    [TestA enumerateProperysUsingBlock:^(objc_property_t property_t, BOOL *stop){
+        NSLog(@"%@", [NSString stringWithUTF8String:property_getName(property_t)]);
+    } shouldStartNextClass:^(Class mClass) {
+        NSLog(@"--------------------- %@", NSStringFromClass(mClass));
+        BOOL result = true;
+        return result;
+    }];
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        A *a = [A new];
-        NSLog(@"a respondsToSelector:@selector(testClass)");
-        NSLog(@"%i", [a respondsToSelector:@selector(testClass)]);
-        NSLog(@"A respondsToSelector:@selector(testInstance)");
-        NSLog(@"%i", [A respondsToSelector:@selector(testInstance)]);
-        
-        for (NSInteger index = 48; index < 58; index++) {
-            NSString *str = [NSString stringWithUTF8String:(char *)&index];
-            uint32_t result1 = 0;
-            uint32_t result2 = 0;
-            sscanf(str.UTF8String, "%X", &result1);
-            sscanf([[str stringByAppendingString:str] UTF8String], "%X", &result2);
-            NSLog(@"%@: 单: %f, 双: %f", str, result1 / 15.0, result2 / 255.0);
-        }
-        
+//        testCalendarManager();
+        testRuntime();
     }
     return 0;
 }
+
+void testCalendarManager() {
+    GMLCalendarManager *manager = GMLCalendarManager.defaultManager;
+    NSLog(@"1. %@", [manager string:@"2022-01-01" format:GMLYearFormat]);
+    NSLog(@"2. %@", [manager date:NSDate.date format:GMLFullDateFormat]);
+    NSLog(@"2. %@", [manager string:[manager date:NSDate.date format:GMLFullDateFormat] format:GMLFullDateFormat]);
+    NSString *dateStr = @"2022-08-15 23:00:00";
+    NSDate *fromDate = [manager string:dateStr format:GMLFullDateFormat];
+    NSDate *toDate = NSDate.date;
+    NSInteger offsetDay = [manager dayWithFromDate:fromDate toDate:toDate];
+    NSLog(@"from: %@, to: %@, offsetDay: %li", fromDate, toDate, (long)offsetDay);
+}
+
+
+
+

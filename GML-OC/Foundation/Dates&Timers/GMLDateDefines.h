@@ -10,13 +10,6 @@
 
 #import <Foundation/NSCalendar.h>
 
-typedef NSString *CGFormatterStyle;
-
-typedef NS_ENUM(NSInteger, GMLCalendar) {
-    
-    GMLCalendarGregorian,
-};
-
 /// CG 中默认的需要的日期的属性：公元|年|月|日|时|分|秒
 FOUNDATION_EXPORT NSCalendarUnit const GMLCalendarUnitAll;
 /// CG 中默认的需要的日期的属性：公元|年|月|日
@@ -25,10 +18,10 @@ FOUNDATION_EXPORT NSCalendarUnit const GMLCalendarUnitYear;
 FOUNDATION_EXPORT NSCalendarUnit const GMLCalendarUnitTime;
 
 /// CG 中默认时间格式化：2018-01-01
-FOUNDATION_EXPORT CGFormatterStyle const GMLFormatStyleYear;
-/// CG 中默认时间格式化：时:分:秒
-FOUNDATION_EXPORT CGFormatterStyle const GMLFormatStyleTime;
-/// CG 中默认时间格式化：2018-01-01 时:分:秒
-FOUNDATION_EXPORT CGFormatterStyle const GMLFormatStyleAll;
+FOUNDATION_EXPORT NSString * const GMLYearFormat;
+/// CG 中默认时间格式化：13:08:08
+FOUNDATION_EXPORT NSString * const GMLTimeFormat;
+/// CG 中默认时间格式化：2018-01-01 13:08:08
+FOUNDATION_EXPORT NSString * const GMLFullDateFormat;
 
 #endif /* GMLDateDefines_h */

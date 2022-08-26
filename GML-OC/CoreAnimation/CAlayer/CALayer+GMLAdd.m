@@ -10,6 +10,10 @@
 #if __has_include(<UIKit/UIScreen.h>)
 #import <UIKit/UIScreen.h>
 #endif
+#if __has_include(<GML_OC/UIColor+GMLAdd.h>)
+#import <GML_OC/UIColor+GMLAdd.h>
+#endif
+
 @implementation CALayer (GMLAdd)
 
 + (void)disableDefaultAnimatedsWithBlock:(void (NS_NOESCAPE ^) (void))block {
@@ -25,6 +29,12 @@
     layer.contentsScale = UIScreen.mainScreen.scale;
 #endif
     layer.backgroundColor = backgroundColor;
+    return layer;
+}
+
++ (instancetype)createLayerWithConfigure:(void (NS_NOESCAPE^ )(id _Nonnull))configure {
+    CALayer *layer = [self createLayerWithBackgroundColor:nil];
+    !configure?: configure(layer);
     return layer;
 }
 
@@ -66,9 +76,11 @@
     NSMutableArray *colorArr = NSMutableArray.array;
     for (id obj in colors) {
         id value = nil;
-//        if ([obj isKindOfClass:[NSString class]]) {
-//            value = (__bridge id)[[UIColor colorWithHexString:obj] CGColor];
-//        }else
+#if __has_include(<GML_OC/UIColor+GMLAdd.h>)
+        if ([obj isKindOfClass:[NSString class]]) {
+            value = (__bridge id)[[UIColor colorWithHexString:obj] CGColor];
+        }else
+#endif
         if ([obj isKindOfClass:[UIColor class]]) {
             value = (__bridge id)[(UIColor *)obj CGColor];
         }else if (CFGetTypeID((__bridge CFTypeRef)obj) == CGColorGetTypeID()) {
