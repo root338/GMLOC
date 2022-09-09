@@ -63,6 +63,55 @@ union MoneyUnion {
 @property(nonatomic, readonly, retain) id idReadonlyRetainNonatomic;
 @end
 
+@interface UIViewController (__Private)
+
+@end
+
+@implementation UIViewController (__Private)
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [UIViewController swizzledInstanceMethodAtSelector:@selector(viewWillAppear:) withInstanceMethodAtSelector:@selector(ggg_viewWillAppear:)];
+    });
+}
+
+- (void)ggg_viewWillAppear:(BOOL)animation {
+    [self ggg_viewWillAppear:animation];
+}
+
+@end
+
+@interface NSString (__Private)
+
+@end
+
+@implementation NSString (__Private)
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [NSString swizzledInstanceMethodAtSelector:@selector(isEqual:) withInstanceMethodAtSelector:@selector(gg_isEqual:)];
+        [NSString swizzledInstanceMethodAtSelector:@selector(isEqualToString:) withInstanceMethodAtSelector:@selector(gg_isEqualToString:)];
+    });
+}
+
+- (BOOL)gg_isEqual:(id)object {
+    return [self gg_isEqual:object];
+}
+- (BOOL)gg_isEqualToString:(NSString *)str {
+    return [self gg_isEqualToString:str];
+}
+
+@end
+
+@interface TestA : NSObject
+
+@end
+@implementation TestA
+
+@end
+
 @implementation ViewController
 
 
@@ -70,16 +119,44 @@ union MoneyUnion {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 //    [self timer1];
 //    [self timer2];
     
-    [[self class] enumerateProperysUsingBlock:^(objc_property_t  _Nonnull property_t, BOOL * _Nonnull stop) {
-        NSLog(@"%@: %@", [NSString stringWithUTF8String:property_getName(property_t)], [NSString stringWithUTF8String:property_getAttributes(property_t)]);
-        
+//    [[self class] enumerateProperysUsingBlock:^(objc_property_t  _Nonnull property_t, BOOL * _Nonnull stop) {
+//        NSLog(@"%@: %@", [NSString stringWithUTF8String:property_getName(property_t)], [NSString stringWithUTF8String:property_getAttributes(property_t)]);
+//
 //        enumerateProperyAttributeList(property_t, ^(objc_property_attribute_t attribute, BOOL * _Nonnull stop) {
 //            NSLog(@"\t%@, %@", [NSString stringWithUTF8String:attribute.name], [NSString stringWithUTF8String:attribute.value]);
 //        });
-    }];
+//    }];
+//    NSNumber *num1  = [NSNumber numberWithInt:1];
+//    NSNumber *num2 = [NSNumber numberWithFloat:1];
+//    NSLog(@"isEqual: %i", [num1 isEqual:num2]);
+//    NSLog(@"isEqualToNumber: %i", [@"" isEqualToString:@""]);
+    
+    NSMutableArray *mArr = NSMutableArray.array;
+    NSArray *arr = NSArray.array;
+    NSSet *set = NSSet.set;
+    NSMutableSet *mSet = NSMutableSet.set;
+    NSOrderedSet *orderedSet = NSOrderedSet.orderedSet;
+    NSMutableOrderedSet *mOrderedSet = NSMutableOrderedSet.orderedSet;
+    NSHashTable *weakhashTable = [NSHashTable weakObjectsHashTable];
+    NSHashTable *strongHashTable = [NSHashTable hashTableWithOptions:NSHashTableStrongMemory];
+    NSLog(@"%@, %@", NSStringFromClass(arr.class), NSStringFromClass(mArr.class));
+    NSLog(@"%@, %@", NSStringFromClass(set.class), NSStringFromClass(mSet.class));
+    NSLog(@"%@, %@", NSStringFromClass(orderedSet.class), NSStringFromClass(mOrderedSet.class));
+    NSLog(@"%@, %@", NSStringFromClass(weakhashTable.class), NSStringFromClass(strongHashTable.class));
+    
+//    NSLog(@"%i, %i", [@[@1] isEqualToArray:^{
+//        NSMutableSet *mArr = [[NSMutableSet alloc] init];
+//        [mArr addObject:[NSNumber numberWithFloat:1]];
+//        return mArr;
+//    }()], [arr isKindOfClass:NSMutableArray.class]);
+    
+    TestA *a = TestA.new;
+    TestA *b = TestA.new;
+    NSLog(@"a, b <==> %i, %i", [a isEqual:b], [a isEqualGML:b]);
 }
 
 - (GMLTimerAdapter *)timer1 {

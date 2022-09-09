@@ -75,6 +75,12 @@
 		ABB5AF3E28B5C7E70011AAC7 /* GMLDataCompare.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB5AF3C28B5C7E70011AAC7 /* GMLDataCompare.h */; };
 		ABB5AF3F28B5C7E70011AAC7 /* GMLDataCompare.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5AF3D28B5C7E70011AAC7 /* GMLDataCompare.m */; };
 		ABB5AF6428B773F80011AAC7 /* Runtime+GMLAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D8B283B3605007FDD41 /* Runtime+GMLAdd.m */; };
+		ABB5AFBC28BC91860011AAC7 /* GMLClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5AFBB28BC91860011AAC7 /* GMLClassInfo.m */; };
+		ABB5AFC628BDA6850011AAC7 /* GMLPropertyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5AFC528BDA6850011AAC7 /* GMLPropertyInfo.m */; };
+		ABB5AFCD28BDDFDC0011AAC7 /* GMLIvarInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5AFCC28BDDFDC0011AAC7 /* GMLIvarInfo.m */; };
+		ABB5AFD028BDE2EC0011AAC7 /* GMLMethodInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5AFCF28BDE2EC0011AAC7 /* GMLMethodInfo.m */; };
+		ABB5AFDD28BDFA150011AAC7 /* GMLObjectCompareConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5AFDC28BDFA150011AAC7 /* GMLObjectCompareConfiguration.m */; };
+		ABB5AFE328BEF3680011AAC7 /* GMLClassInfo+GMLFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB5AFE228BEF3680011AAC7 /* GMLClassInfo+GMLFilter.m */; };
 		ABDB9D74283B35BA007FDD41 /* GML_OC.docc in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D73283B35BA007FDD41 /* GML_OC.docc */; };
 		ABDB9D7A283B35BA007FDD41 /* GML_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */; };
 		ABDB9D7F283B35BA007FDD41 /* GML_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB9D7E283B35BA007FDD41 /* GML_OCTests.m */; };
@@ -227,6 +233,20 @@
 		AB9FA58E288A8E5900A08C7C /* NSArray+GMLAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+GMLAdd.m"; sourceTree = "<group>"; };
 		ABB5AF3C28B5C7E70011AAC7 /* GMLDataCompare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLDataCompare.h; sourceTree = "<group>"; };
 		ABB5AF3D28B5C7E70011AAC7 /* GMLDataCompare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLDataCompare.m; sourceTree = "<group>"; };
+		ABB5AF6D28B8AE380011AAC7 /* GMLRuntimeDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLRuntimeDefines.h; sourceTree = "<group>"; };
+		ABB5AFBA28BC91860011AAC7 /* GMLClassInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLClassInfo.h; sourceTree = "<group>"; };
+		ABB5AFBB28BC91860011AAC7 /* GMLClassInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLClassInfo.m; sourceTree = "<group>"; };
+		ABB5AFC428BDA6850011AAC7 /* GMLPropertyInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLPropertyInfo.h; sourceTree = "<group>"; };
+		ABB5AFC528BDA6850011AAC7 /* GMLPropertyInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLPropertyInfo.m; sourceTree = "<group>"; };
+		ABB5AFCA28BDDF870011AAC7 /* GMLRuntimePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLRuntimePrivate.h; sourceTree = "<group>"; };
+		ABB5AFCB28BDDFDC0011AAC7 /* GMLIvarInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLIvarInfo.h; sourceTree = "<group>"; };
+		ABB5AFCC28BDDFDC0011AAC7 /* GMLIvarInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLIvarInfo.m; sourceTree = "<group>"; };
+		ABB5AFCE28BDE2EC0011AAC7 /* GMLMethodInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLMethodInfo.h; sourceTree = "<group>"; };
+		ABB5AFCF28BDE2EC0011AAC7 /* GMLMethodInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLMethodInfo.m; sourceTree = "<group>"; };
+		ABB5AFDB28BDFA150011AAC7 /* GMLObjectCompareConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GMLObjectCompareConfiguration.h; sourceTree = "<group>"; };
+		ABB5AFDC28BDFA150011AAC7 /* GMLObjectCompareConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMLObjectCompareConfiguration.m; sourceTree = "<group>"; };
+		ABB5AFE128BEF3680011AAC7 /* GMLClassInfo+GMLFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GMLClassInfo+GMLFilter.h"; sourceTree = "<group>"; };
+		ABB5AFE228BEF3680011AAC7 /* GMLClassInfo+GMLFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GMLClassInfo+GMLFilter.m"; sourceTree = "<group>"; };
 		ABDB9D6F283B35BA007FDD41 /* GML_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GML_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDB9D72283B35BA007FDD41 /* GML_OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GML_OC.h; sourceTree = "<group>"; };
 		ABDB9D73283B35BA007FDD41 /* GML_OC.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GML_OC.docc; sourceTree = "<group>"; };
@@ -642,6 +662,42 @@
 			path = DataCompare;
 			sourceTree = "<group>";
 		};
+		ABB5AF6C28B8AE240011AAC7 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				ABB5AF6D28B8AE380011AAC7 /* GMLRuntimeDefines.h */,
+			);
+			path = Defines;
+			sourceTree = "<group>";
+		};
+		ABB5AF6E28BC52530011AAC7 /* ModelInfo */ = {
+			isa = PBXGroup;
+			children = (
+				ABB5AFC928BDDF750011AAC7 /* Private */,
+				ABB5AFBA28BC91860011AAC7 /* GMLClassInfo.h */,
+				ABB5AFBB28BC91860011AAC7 /* GMLClassInfo.m */,
+				ABB5AFC428BDA6850011AAC7 /* GMLPropertyInfo.h */,
+				ABB5AFC528BDA6850011AAC7 /* GMLPropertyInfo.m */,
+				ABB5AFE128BEF3680011AAC7 /* GMLClassInfo+GMLFilter.h */,
+				ABB5AFE228BEF3680011AAC7 /* GMLClassInfo+GMLFilter.m */,
+				ABB5AFCB28BDDFDC0011AAC7 /* GMLIvarInfo.h */,
+				ABB5AFCC28BDDFDC0011AAC7 /* GMLIvarInfo.m */,
+				ABB5AFCE28BDE2EC0011AAC7 /* GMLMethodInfo.h */,
+				ABB5AFCF28BDE2EC0011AAC7 /* GMLMethodInfo.m */,
+				ABB5AFDB28BDFA150011AAC7 /* GMLObjectCompareConfiguration.h */,
+				ABB5AFDC28BDFA150011AAC7 /* GMLObjectCompareConfiguration.m */,
+			);
+			path = ModelInfo;
+			sourceTree = "<group>";
+		};
+		ABB5AFC928BDDF750011AAC7 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				ABB5AFCA28BDDF870011AAC7 /* GMLRuntimePrivate.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
 		ABDB9D65283B35BA007FDD41 = {
 			isa = PBXGroup;
 			children = (
@@ -699,6 +755,7 @@
 		ABDB9D89283B35CE007FDD41 /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
+				ABB5AF6C28B8AE240011AAC7 /* Defines */,
 				ABDB9D8A283B3605007FDD41 /* Runtime+GMLAdd.h */,
 				ABDB9D8B283B3605007FDD41 /* Runtime+GMLAdd.m */,
 			);
@@ -792,6 +849,7 @@
 			isa = PBXGroup;
 			children = (
 				ABDB9DCD283C6E0A007FDD41 /* main.m */,
+				ABB5AF6E28BC52530011AAC7 /* ModelInfo */,
 			);
 			path = TestLineCommand;
 			sourceTree = "<group>";
@@ -1215,10 +1273,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB5AFE328BEF3680011AAC7 /* GMLClassInfo+GMLFilter.m in Sources */,
 				AB22DFD3288502AB00181E48 /* GMLTimerAdapter.m in Sources */,
 				AB9623AE28AA39250052E135 /* GMLCalendarManager.m in Sources */,
 				ABB5AF6428B773F80011AAC7 /* Runtime+GMLAdd.m in Sources */,
 				ABDB9DCE283C6E0A007FDD41 /* main.m in Sources */,
+				ABB5AFDD28BDFA150011AAC7 /* GMLObjectCompareConfiguration.m in Sources */,
+				ABB5AFCD28BDDFDC0011AAC7 /* GMLIvarInfo.m in Sources */,
+				ABB5AFD028BDE2EC0011AAC7 /* GMLMethodInfo.m in Sources */,
+				ABB5AFBC28BC91860011AAC7 /* GMLClassInfo.m in Sources */,
+				ABB5AFC628BDA6850011AAC7 /* GMLPropertyInfo.m in Sources */,
 				AB9623AF28AA392A0052E135 /* GMLDateDefines.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

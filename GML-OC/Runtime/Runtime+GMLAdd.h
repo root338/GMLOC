@@ -47,7 +47,12 @@ __attribute__((unused)) static void enumerateProperyAttributeList(objc_property_
 
 
 
-//- (BOOL)isEqual_gml:(id)object;
+/// 对比两个对象
+/// 注意：
+/// 对于 NSDictionary | NSSet 这类无序集合，其中 NSDictionary 的 keys，及 NSSet 通过 NSObject isEqual 进行判断 !!!
+- (BOOL)isEqualGML:(id)object;
+
+//- (BOOL)isValueEqual:(id)object;
 
 @end
 
