@@ -24,6 +24,8 @@ union MoneyUnion {
 
 @interface ViewController ()
 
+@property (nonatomic, copy) NSString *name;
+
 @property (nonatomic, assign) NSInteger a;
 @property (nonatomic, assign) float b;
 @property (nonatomic, strong) NSString *str;
@@ -120,43 +122,54 @@ union MoneyUnion {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self timer1];
-//    [self timer2];
+    //    [self timer1];
+    //    [self timer2];
     
-//    [[self class] enumerateProperysUsingBlock:^(objc_property_t  _Nonnull property_t, BOOL * _Nonnull stop) {
-//        NSLog(@"%@: %@", [NSString stringWithUTF8String:property_getName(property_t)], [NSString stringWithUTF8String:property_getAttributes(property_t)]);
-//
-//        enumerateProperyAttributeList(property_t, ^(objc_property_attribute_t attribute, BOOL * _Nonnull stop) {
-//            NSLog(@"\t%@, %@", [NSString stringWithUTF8String:attribute.name], [NSString stringWithUTF8String:attribute.value]);
-//        });
-//    }];
-//    NSNumber *num1  = [NSNumber numberWithInt:1];
-//    NSNumber *num2 = [NSNumber numberWithFloat:1];
-//    NSLog(@"isEqual: %i", [num1 isEqual:num2]);
-//    NSLog(@"isEqualToNumber: %i", [@"" isEqualToString:@""]);
+    //    [[self class] enumerateProperysUsingBlock:^(objc_property_t  _Nonnull property_t, BOOL * _Nonnull stop) {
+    //        NSLog(@"%@: %@", [NSString stringWithUTF8String:property_getName(property_t)], [NSString stringWithUTF8String:property_getAttributes(property_t)]);
+    //
+    //        enumerateProperyAttributeList(property_t, ^(objc_property_attribute_t attribute, BOOL * _Nonnull stop) {
+    //            NSLog(@"\t%@, %@", [NSString stringWithUTF8String:attribute.name], [NSString stringWithUTF8String:attribute.value]);
+    //        });
+    //    }];
+    //    NSNumber *num1  = [NSNumber numberWithInt:1];
+    //    NSNumber *num2 = [NSNumber numberWithFloat:1];
+    //    NSLog(@"isEqual: %i", [num1 isEqual:num2]);
+    //    NSLog(@"isEqualToNumber: %i", [@"" isEqualToString:@""]);
     
-    NSMutableArray *mArr = NSMutableArray.array;
-    NSArray *arr = NSArray.array;
-    NSSet *set = NSSet.set;
-    NSMutableSet *mSet = NSMutableSet.set;
-    NSOrderedSet *orderedSet = NSOrderedSet.orderedSet;
-    NSMutableOrderedSet *mOrderedSet = NSMutableOrderedSet.orderedSet;
-    NSHashTable *weakhashTable = [NSHashTable weakObjectsHashTable];
-    NSHashTable *strongHashTable = [NSHashTable hashTableWithOptions:NSHashTableStrongMemory];
-    NSLog(@"%@, %@", NSStringFromClass(arr.class), NSStringFromClass(mArr.class));
-    NSLog(@"%@, %@", NSStringFromClass(set.class), NSStringFromClass(mSet.class));
-    NSLog(@"%@, %@", NSStringFromClass(orderedSet.class), NSStringFromClass(mOrderedSet.class));
-    NSLog(@"%@, %@", NSStringFromClass(weakhashTable.class), NSStringFromClass(strongHashTable.class));
+    //    NSMutableArray *mArr = NSMutableArray.array;
+    //    NSArray *arr = NSArray.array;
+    //    NSSet *set = NSSet.set;
+    //    NSMutableSet *mSet = NSMutableSet.set;
+    //    NSOrderedSet *orderedSet = NSOrderedSet.orderedSet;
+    //    NSMutableOrderedSet *mOrderedSet = NSMutableOrderedSet.orderedSet;
+    //    NSHashTable *weakhashTable = [NSHashTable weakObjectsHashTable];
+    //    NSHashTable *strongHashTable = [NSHashTable hashTableWithOptions:NSHashTableStrongMemory];
+    //    NSLog(@"%@, %@", NSStringFromClass(arr.class), NSStringFromClass(mArr.class));
+    //    NSLog(@"%@, %@", NSStringFromClass(set.class), NSStringFromClass(mSet.class));
+    //    NSLog(@"%@, %@", NSStringFromClass(orderedSet.class), NSStringFromClass(mOrderedSet.class));
+    //    NSLog(@"%@, %@", NSStringFromClass(weakhashTable.class), NSStringFromClass(strongHashTable.class));
     
-//    NSLog(@"%i, %i", [@[@1] isEqualToArray:^{
-//        NSMutableSet *mArr = [[NSMutableSet alloc] init];
-//        [mArr addObject:[NSNumber numberWithFloat:1]];
-//        return mArr;
-//    }()], [arr isKindOfClass:NSMutableArray.class]);
+    //    NSLog(@"%i, %i", [@[@1] isEqualToArray:^{
+    //        NSMutableSet *mArr = [[NSMutableSet alloc] init];
+    //        [mArr addObject:[NSNumber numberWithFloat:1]];
+    //        return mArr;
+    //    }()], [arr isKindOfClass:NSMutableArray.class]);
     
-    TestA *a = TestA.new;
-    TestA *b = TestA.new;
-    NSLog(@"a, b <==> %i, %i", [a isEqual:b], [a isEqualGML:b]);
+    //    TestA *a = TestA.new;
+    //    TestA *b = TestA.new;
+    //    NSLog(@"a, b <==> %i, %i", [a isEqual:b], [a isEqualGML:b]);
+    NSNumber *num = @1;
+    NSLog(@"%p", num);
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    for (int i = 0; i < 1000; i++) {
+        dispatch_async(queue, ^{
+            self.name = [NSString stringWithFormat:@"abcdefghij"];
+        });
+    }
+    //    NSLog(@"%p", num->isa);
+    
+    NSLog(@"");
 }
 
 - (GMLTimerAdapter *)timer1 {

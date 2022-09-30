@@ -246,6 +246,66 @@ typedef NS_OPTIONS(NSUInteger, YJMessageType) {
     YJMessageTypeUpdateDisplay = 1 << 16,
 };
 
+@interface TestObjectA : NSObject
+
+@end
+@implementation TestObjectA
+- (void)test {
+    NSObject *a = self;
+    NSLog(@"a: %p", @selector(test));
+    NSLog(@"type encoding: %s", method_getTypeEncoding(class_getInstanceMethod([self class], @selector(test))));
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    return nil;
+}
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    NSMethodSignature *methodSignature = [NSMethodSignature signatureWithObjCTypes:method_getTypeEncoding(class_getInstanceMethod(self.class, @selector(test)))];
+    NSLog(@"m: %@", methodSignature);
+    return methodSignature;
+}
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    anInvocation.selector = @selector(test);
+    anInvocation.target = self;
+    [anInvocation invoke];
+}
+@end
+@interface TestObjectB : NSObject
+- (void)runTest:(id)obj obj2:(id)obj2 str:(NSString *)str intV:(int)intV;
+@property (nonatomic, strong) TestObjectA *objectA;
+@end
+@implementation TestObjectB
+
+- (void)test {
+    
+}
+//+ (BOOL)resolveInstanceMethod:(SEL)sel {
+//    [super resolveInstanceMethod:sel];
+//}
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    return self.objectA;
+}
+- (id)test:(id)value int1:(int)int1 {
+    NSLog(@"b: value: %@, int: %i", value, int1);
+    NSLog(@"type encoding: %s", method_getTypeEncoding(class_getInstanceMethod([self class], @selector(test))));
+    return nil;
+}
+
+//+ (BOOL)resolveInstanceMethod:(SEL)sel {
+//    if (sel == @selector(runTest:obj2:str:intV:)) {
+//        return class_addMethod(self, sel, class_getMethodImplementation(self, @selector(test:int1:)), method_getTypeEncoding(class_getInstanceMethod(self, @selector(test:int1:))));
+//    }
+//    return [super resolveInstanceMethod:sel];
+//}
+
+- (TestObjectA *)objectA {
+    if (_objectA == nil) {
+        _objectA = [TestObjectA new];
+    }
+    return _objectA;
+}
+
+@end
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        testCalendarManager();
@@ -261,10 +321,19 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"%@, %@, %i", NSStringFromClass(str1.superclass), NSStringFromClass(obj2.class), [str1.superclass isMemberOfClass:obj2.class]);
 //        NSLog(@"%i", [TestA.new isValueEqual:TestA.new configuration:nil]);
         
-        YJMessageType type = YJMessageTypeRegionLayer + YJMessageTypeOperateUpdate + YJMessageTypeUpdateStyle;
-        type ^= YJMessageTypeUpdateStyle;
+//        YJMessageType type = YJMessageTypeRegionLayer + YJMessageTypeOperateUpdate + YJMessageTypeUpdateStyle;
+//        type ^= YJMessageTypeUpdateStyle;
         
-        NSLog(@"%i, %i, %i", type & YJMessageTypeLayerMask, type & YJMessageTypeOperateMask, type & YJMessageTypeUpdateMask);
+//        NSLog(@"%i, %i, %i", type & YJMessageTypeLayerMask, type & YJMessageTypeOperateMask, type & YJMessageTypeUpdateMask);
+        
+//        SEL selector = @selector(test);
+//        NSLog(@"%s", selector);
+        NSNumber *numb1 = @1;
+        NSLog(@"test number: %p", numb1);
+        
+//        [[TestObjectA new] test];
+//        [[TestObjectB new] runTest:[NSObject new] obj2:[NSObject new] str:@"hei" intV:14];
+//        [[TestObjectB new] runTest];
     }
     return 0;
 }
